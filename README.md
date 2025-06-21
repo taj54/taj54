@@ -1,46 +1,32 @@
-# 👋 Hi there, I'm Taj
+# 👨‍💻 Hey, I'm Taj
 
-🎯 **Full Stack Developer** | 💼 4.2+ Years of Experience | 🌐 India  
-
-I'm a passionate full stack developer who loves building scalable web apps, intuitive UIs, and robust back-end systems. I excel at bridging the gap between functionality and design.
-
----
-
-## 🔧 Tech Stack
-
-- **Languages:** PHP, JavaScript, SQL  
-- **Frameworks:** Laravel, Node.js, React.js, CodeIgniter, NestJS  
-- **Tools:** MySQL, Firebase, Git, Postman, Figma  
-- **Concepts:** REST APIs, Agile, Web Architecture, Project Management  
+Code whisperer @ 3AM 🌙  
+I build full stack magic with **Laravel**, **React**, and **Node.js** ⚡  
+Pushing pixels & APIs with purpose since 2020.
 
 ---
 
-## 🚀 Projects I'm Proud Of
-
-- **🔧 GKAutomobiles Platform:** Car service management system  
-- **🛍️ Quicke B2C & B2B Platforms:** Spearheaded end-to-end development & architecture  
-- **🔗 Qconnect:** Internal communication integration tool  
-- **🖌️ Visual Editor:** Built with React + Trello-style interface  
-- **🤖 Marketing AI:** Integrated automation with Crew.ai  
+## 🔧 Tech I Love
+`PHP` • `Laravel` • `React.js` • `Node.js` • `MySQL` • `JavaScript`
 
 ---
 
-## 📚 Certifications
+## 🧩 Projects I’m Proud Of
+- 🛠️ GKAutomobiles – Service Center Management Platform  
+- 🧱 Quicke B2B/B2C – Architected scalable commerce apps  
+- 🧠 Crew.ai Marketing – Built AI-integrated marketing engine  
+- 🖌️ Visual Editor – React-based drag & drop UI builder
 
-- **Google Project Management** (Mar 2025)  
-- **React Basics – Coursera** (Jun 2023)  
-- **Web Design for Everybody – Coursera**  
-- *(+ more listed on [LinkedIn](https://www.linkedin.com/in/tajul-islam-j))*  
+---
+
+## 🚀 Quick Bits
+- 📍 Based in India 🇮🇳  
+- 🧩 Problem solver at heart  
+- 🌐 I believe good UIs make great apps  
+- 🔗 [LinkedIn](https://www.linkedin.com/in/tajul-islam-j) • [GitHub](https://github.com/taj54) • [Portfolio](https://taj54.github.io)
 
 ---
 
-## 📫 Let's Connect
-
-- 📧 Email: [tajulislamj200@gmail.com](mailto:tajulislamj200@gmail.com)  
-- 🔗 LinkedIn: [linkedin.com/in/tajul-islam-j](https://www.linkedin.com/in/tajul-islam-j)  
-- 🐙 GitHub: [github.com/taj54](https://github.com/taj54)
-
----
 
 > *"Code is like humor. When you have to explain it, it’s bad." – Cory House*
 
