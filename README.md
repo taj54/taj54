@@ -28,5 +28,5 @@ Pushing pixels & APIs with purpose since 2020.
 ---
 
 
-> *"Code is like humor. When you have to explain it, it’s bad." – Cory House*
+> *"Clean architecture is about intent: your system should scream what it does."– Uncle Bob (Robert C. Martin)*
 
