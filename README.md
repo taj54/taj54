@@ -1,4 +1,4 @@
-# 👋 Hi there, I'm Tajul Islam
+# 👋 Hi there, I'm Taj
 
 🎯 **Full Stack Developer** | 💼 4.2+ Years of Experience | 🌐 India  
 
