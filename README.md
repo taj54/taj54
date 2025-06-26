@@ -23,7 +23,7 @@ Pushing pixels & APIs with purpose since 2020.
 - 📍 Based in India 🇮🇳  
 - 🧩 Problem solver at heart  
 - 🌐 I believe good UIs make great apps  
-- 🔗 [LinkedIn](https://www.linkedin.com/in/tajul-islam-j) • [GitHub](https://github.com/taj54) • [Portfolio](https://taj54.github.io) • [VS Code Marketplace](https://marketplace.visualstudio.com/publishers/taj54dev)
+- 🔗 [LinkedIn](https://www.linkedin.com/in/tajul-islam-j) • [GitHub](https://github.com/taj54) • [Portfolio](https://taj54.github.io) • [VS Code Marketplace](https://marketplace.visualstudio.com/publishers/taj154dev)
 
 ---
 
