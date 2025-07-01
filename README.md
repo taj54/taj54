@@ -16,13 +16,6 @@ Pushing pixels & APIs with precision since 2020.
 ![Taj's GitHub Stats](https://github-readme-stats.vercel.app/api?username=taj54&show_icons=true&theme=tokyonight&border_radius=10)  
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=taj54&layout=compact&theme=tokyonight&border_radius=10)
 
-### 🔥 GitHub Streak
-
-[![GitHub Streak](https://streak-stats.demolab.com?user=taj54&theme=tokyonight&hide_border=true&border_radius=10)](https://git.io/streak-stats)
-
-### 🐍 Contribution Snake
-
-![snake gif](https://github.com/taj54/taj54/blob/output/github-contribution-grid-snake.svg)
 
 ---
 
@@ -46,7 +39,7 @@ Pushing pixels & APIs with precision since 2020.
 ![VS Code](https://img.shields.io/badge/Editor-VSCode-blue?style=flat-square&logo=visualstudiocode)
 ![Postman](https://img.shields.io/badge/API%20Testing-Postman-orange?style=flat-square&logo=postman)
 ![Git](https://img.shields.io/badge/Version-Git-critical?style=flat-square&logo=git)
-
+![Docker](https://img.shields.io/badge/Container-Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ---
 
 ## 🧠 Currently Learning
