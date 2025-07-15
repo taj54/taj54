@@ -14,8 +14,6 @@ Pushing pixels & APIs with precision since 2020.
 ### 📊 GitHub Stats
 
 ![Taj's GitHub Stats](https://github-readme-stats.vercel.app/api?username=taj54&show_icons=true&theme=tokyonight&border_radius=10)  
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=taj54&layout=compact&theme=tokyonight&border_radius=10)
-
 
 ---
 
