@@ -8,7 +8,7 @@
 
 ## 🚩 About Me
 
-- 📍 Based in India 🇨🇳
+- 📍 Based in India 
 - 🎯 Passionate about clean architecture, scalable systems & delightful user experiences
 - 🧠 Lifelong learner—always exploring new tech, frameworks, and patterns
 - 🤝 Open to collaboration & new adventures in tech
