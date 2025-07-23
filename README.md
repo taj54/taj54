@@ -43,16 +43,18 @@
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?logo=firebase&logoColor=black&style=flat-square)
 
 ### 🛠 Tools & DevOps  
-![Docker](https://img.shields.io/badge/Container-Docker-2496ED?logo=docker&logoColor=white&style=flat-square)  
-![Git](https://img.shields.io/badge/Version-Git-critical?logo=git&style=flat-square)
+![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white&style=flat-square)  
+![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white&style=flat-square)
+![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white&style=flat-square)
 ![Jira](https://img.shields.io/badge/Jira-0052CC?logo=jira&logoColor=white&style=flat-square)
 
 ### 🧪 API & Testing  
-![Postman](https://img.shields.io/badge/API%20Testing-Postman-orange?logo=postman&style=flat-square)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?logo=postman&logoColor=white&style=flat-square)
 ![Mocha](https://img.shields.io/badge/Mocha-8D6748?logo=mocha&logoColor=white&style=flat-square)
 
 ### 🖥️ Editor & IDE  
-![VS Code](https://img.shields.io/badge/Editor-VSCode-blue?logo=visualstudiocode&style=flat-square)
+![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?logo=visualstudiocode&logoColor=white&style=flat-square)
+
 
 ---
 
