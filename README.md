@@ -100,9 +100,6 @@
 
 ---
 
-If you find my work helpful, consider supporting me:
-
-[![Sponsor via PayPal](https://img.shields.io/badge/Sponsor-PayPal-blue?logo=paypal)](https://www.paypal.me/8428506525)
 
 
 > *"Clean architecture is about intent: your system should scream what it does."*  
