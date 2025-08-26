@@ -53,6 +53,8 @@
 ### 🧪 API & Testing  
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?logo=postman&logoColor=white&style=flat-square)
 ![Mocha](https://img.shields.io/badge/Mocha-8D6748?logo=mocha&logoColor=white&style=flat-square)
+![Vitest](https://img.shields.io/badge/vitest-6E9F18?logo=vitest&logoColor=white&style=flat-square)
+
 
 ### 🖥️ Editor & IDE  
 ![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?logo=visualstudiocode&logoColor=white&style=flat-square)
