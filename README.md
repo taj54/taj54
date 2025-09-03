@@ -4,7 +4,10 @@
 🚀 Turning ideas into elegant apps with **Laravel**, **React**, and **Node.js**  
 🧹 Builder of beautiful UIs & robust APIs since 2020
 
+>Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/tajul-islam-j) or explore my other repositories!
+
 ---
+
 
 ## 🚩 About Me
 
@@ -34,7 +37,7 @@
 ![Laravel](https://img.shields.io/badge/Laravel-E74430?logo=laravel&logoColor=white&style=flat-square)  
 ![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white&style=flat-square)  
 ![Express.js](https://img.shields.io/badge/Express.js-000000?logo=express&logoColor=white&style=flat-square)
-![NestJS](https://img.shields.io/badge/NestJS-e0234e?style=flat-square&logo=nestjs&logoColor=white)
+![NestJS](https://img.shields.io/badge/NestJS-e0234e?logo=nestjs&logoColor=white&style=flat-square)
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=flat-square)
 
 ### 🗔️ Database  
