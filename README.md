@@ -75,6 +75,12 @@
 
 ---
 
+## 🤝 Open Source Contributions
+
+- [Interactive Video Labs](https://github.com/interactive-video-labs) - Core contributor to a suite of open-source tools for building intelligent, cue-based interactive video experiences. Focused on developing the framework-agnostic `interactive-video-core` engine, integrating with various JavaScript frameworks (Angular, Svelte, Vue, React), and contributing to tools for cue detection and lesson management.
+
+---
+
 ## 🌱 Currently Growing
 
 - 🔍 Diving deeper into TypeScript & FastAPI  
