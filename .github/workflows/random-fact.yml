@@ -22,76 +22,74 @@ jobs:
 
       - name: Write Python script
         run: |
-          cat <<EOF > update_readme.py
-            import random
-            import os
-
+          echo "
+          import random
+          import os
             facts = [
-                "Built a Laravel MCP starter kit for tenant-aware apps.",
-                "Migrated legacy CodeIgniter apps into Laravel with AI help.",
-                "I create custom VS Code extensions just for fun.",
-                "Automated version bumping with my own GitHub Action.",
-                "Love mixing FastAPI with video workflows.",
-                "Dark mode + lofi = peak productivity.",
-                "I once broke production with a single missing comma.",
-                "I debug best with strong coffee in hand.",
-                "I write tools I wish already existed.",
-                "I built a Telegram bot with modular handlers.",
-                "Git commit messages are my form of storytelling.",
-                "MoviePy and FastAPI power my video experiments.",
-                "I forked youtube_metadata_verifier and made it better.",
-                "I prefer clean, modular code over quick hacks.",
-                "Sometimes I code just to automate coding itself.",
-                "My VS Code setup changes more often than my wallpaper.",
-                "I enjoy turning monoliths into SaaS platforms.",
-                "I use CrewAI to teach old code new tricks.",
-                "My projects usually start as scratchpads, then evolve.",
-                "I think admins deserve beautiful dashboards too.",
-                "I once fixed a bug by rewriting the whole module.",
-                "I push commits with names only I can understand.",
-                "I like making tech feel fun, not scary."
+              \"Built a Laravel MCP starter kit for tenant-aware apps.\",
+              \"Migrated legacy CodeIgniter apps into Laravel with AI help.\",
+              \"I create custom VS Code extensions just for fun.\",
+              \"Automated version bumping with my own GitHub Action.\",
+              \"Love mixing FastAPI with video workflows.\",
+              \"Dark mode and lofi = peak productivity.\",
+              \"I once broke production with a single missing comma.\",
+              \"I debug best with strong coffee in hand.\",
+              \"I write tools I wish already existed.\",
+              \"I built a Telegram bot with modular handlers.\",
+              \"Git commit messages are my form of storytelling.\",
+              \"MoviePy and FastAPI power my video experiments.\",
+              \"I forked youtube_metadata_verifier and made it better.\",
+              \"I prefer clean, modular code over quick hacks.\",
+              \"Sometimes I code just to automate coding itself.\",
+              \"DaVinci Resolve is my creative coding partner.\",
+              \"My VS Code setup changes more often than my wallpaper.\",
+              \"I enjoy turning monoliths into SaaS platforms.\",
+              \"I use CrewAI to teach old code new tricks.\",
+              \"My projects usually start as scratchpads, then evolve.\",
+              \"I think admins deserve beautiful dashboards too.\",
+              \"I once fixed a bug by rewriting the whole module.\",
+              \"I push commits with names only I can understand.\",
+              \"I like making tech feel fun, not scary.\"
             ]
 
 
-            random_fact = random.choice(facts)
 
-            readme_path = 'README.md'
-            with open(readme_path, 'r', encoding='utf-8') as f:
-                readme_content = f.read()
+          random_fact = random.choice(facts)
 
-            # Define the markers for the random fact section
-            start_marker = '<!-- RANDOM_FACT_START -->'
-            end_marker = '<!-- RANDOM_FACT_END -->'
+          readme_path = 'README.md'
+          with open(readme_path, 'r', encoding='utf-8') as f:
+              readme_content = f.read()
 
-            # Ensure markers exist, if not, the script will fail or behave unexpectedly
-            if start_marker not in readme_content or end_marker not in readme_content:
-                print('Error: RANDOM_FACT_START or RANDOM_FACT_END markers not found in README.md')
-                exit(1)
+          # Define the markers for the random fact section
+          start_marker = '<!-- RANDOM_FACT_START -->'
+          end_marker = '<!-- RANDOM_FACT_END -->'
 
-            # Replace the content between markers
-            new_readme_content = []
-            in_fact_section = False
-            for line in readme_content.splitlines():
-                if start_marker in line:
-                    in_fact_section = True
-                    new_readme_content.append(line)
-                    new_readme_content.append(f'- {random_fact}') # Add the new fact
-                elif end_marker in line:
-                    in_fact_section = False
-                    new_readme_content.append(line)
-                elif not in_fact_section:
-                    new_readme_content.append(line)
+          # Ensure markers exist, if not, the script will fail or behave unexpectedly
+          if start_marker not in readme_content or end_marker not in readme_content:
+              print('Error: RANDOM_FACT_START or RANDOM_FACT_END markers not found in README.md')
+              exit(1)
 
-            updated_content = '\n'.join(new_readme_content)
+          # Replace the content between markers
+          new_readme_content = []
+          in_fact_section = False
+          for line in readme_content.splitlines():
+              if start_marker in line:
+                  in_fact_section = True
+                  new_readme_content.append(line)
+                  new_readme_content.append(f'- {random_fact}') # Add the new fact
+              elif end_marker in line:
+                  in_fact_section = False
+                  new_readme_content.append(line)
+              elif not in_fact_section:
+                  new_readme_content.append(line)
 
-            with open(readme_path, 'w', encoding='utf-8') as f:
-                f.write(updated_content)
+          updated_content = '\\n'.join(new_readme_content)
 
-            print(f'README.md updated with fact: {random_fact}')
-            EOF
+          with open(readme_path, 'w', encoding='utf-8') as f:
+              f.write(updated_content)
 
-      - name: Debug - List files after script creation
-        run: ls -l
+          print(f'README.md updated with fact: {random_fact}')
+          " > update_readme.py
 
       - name: Run Python script to update README
         run: python update_readme.py
