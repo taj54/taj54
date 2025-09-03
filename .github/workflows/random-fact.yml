@@ -26,13 +26,19 @@ jobs:
           import random
           import os
 
-          facts = [
-              \"I once wrote a 'Hello World' program that crashed the entire system.\",
-              \"My spirit animal is a rubber duck.\",
-              \"I believe semicolons are optional, but good manners are not.\",
-              \"My code is 90% comments, 10% actual code.\",
-              \"I can code in my sleep (and sometimes do).\"
-          ]
+            facts = [
+                "Built my own Laravel MCP starter kit.",
+                "Migrated CodeIgniter projects to Laravel using CrewAI.",
+                "I craft VS Code extensions for fun.",
+                "Automated GitHub versioning with my own action.",
+                "Love building admin panels with FastAPI.",
+                "Dark mode + lofi beats = my coding flow.",
+                "I once broke prod with a one-line fix.",
+                "I debug faster with coffee than without.",
+                "I test in local, pray in prod.",
+                "I believe Git commit messages are modern poetry."
+            ]
+
 
           random_fact = random.choice(facts)
 
