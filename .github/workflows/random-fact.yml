@@ -17,64 +17,66 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Run script to update README
+      - name: Write Python script
         run: |
-          python -c "
-            import random
-            import os
+          echo "
+          import random
+          import os
 
-            facts = [
-                "I once wrote a 'Hello World' program that crashed the entire system.",
-                "My spirit animal is a rubber duck.",
-                "I believe semicolons are optional, but good manners are not.",
-                "My code is 90% comments, 10% actual code.",
-                "I can code in my sleep (and sometimes do)."
-            ]
+          facts = [
+              \"I once wrote a 'Hello World' program that crashed the entire system.\",
+              \"My spirit animal is a rubber duck.\",
+              \"I believe semicolons are optional, but good manners are not.\",
+              \"My code is 90% comments, 10% actual code.\",
+              \"I can code in my sleep (and sometimes do).\"
+          ]
 
-            random_fact = random.choice(facts)
+          random_fact = random.choice(facts)
 
-            readme_path = 'README.md'
-            with open(readme_path, 'r', encoding='utf-8') as f:
-                readme_content = f.read()
+          readme_path = 'README.md'
+          with open(readme_path, 'r', encoding='utf-8') as f:
+              readme_content = f.read()
 
-            # Define the markers for the random fact section
-            start_marker = '<!-- RANDOM_FACT_START -->'
-            end_marker = '<!-- RANDOM_FACT_END -->'
+          # Define the markers for the random fact section
+          start_marker = '<!-- RANDOM_FACT_START -->'
+          end_marker = '<!-- RANDOM_FACT_END -->'
 
-            # Ensure markers exist, if not, the script will fail or behave unexpectedly
-            # The previous step should have added them, but this is a safeguard
-            if start_marker not in readme_content or end_marker not in readme_content:
-                print('Error: RANDOM_FACT_START or RANDOM_FACT_END markers not found in README.md')
-                exit(1)
+          # Ensure markers exist, if not, the script will fail or behave unexpectedly
+          if start_marker not in readme_content or end_marker not in readme_content:
+              print('Error: RANDOM_FACT_START or RANDOM_FACT_END markers not found in README.md')
+              exit(1)
 
-            # Replace the content between markers
-            new_readme_content = []
-            in_fact_section = False
-            for line in readme_content.splitlines():
-                if start_marker in line:
-                    in_fact_section = True
-                    new_readme_content.append(line)
-                    new_readme_content.append(f'- {random_fact}') # Add the new fact
-                elif end_marker in line:
-                    in_fact_section = False
-                    new_readme_content.append(line)
-                elif not in_fact_section:
-                    new_readme_content.append(line)
+          # Replace the content between markers
+          new_readme_content = []
+          in_fact_section = False
+          for line in readme_content.splitlines():
+              if start_marker in line:
+                  in_fact_section = True
+                  new_readme_content.append(line)
+                  new_readme_content.append(f'- {random_fact}') # Add the new fact
+              elif end_marker in line:
+                  in_fact_section = False
+                  new_readme_content.append(line)
+              elif not in_fact_section:
+                  new_readme_content.append(line)
 
-            updated_content = '\n'.join(new_readme_content)
+          updated_content = '\\n'.join(new_readme_content)
 
-            with open(readme_path, 'w', encoding='utf-8') as f:
-                f.write(updated_content)
+          with open(readme_path, 'w', encoding='utf-8') as f:
+              f.write(updated_content)
 
-            print(f'README.md updated with fact: {random_fact}')
-            "
+          print(f'README.md updated with fact: {random_fact}')
+          " > update_readme.py
 
-                  - name: Commit and push changes
-                    run: |
-                      git config user.name github-actions[bot]
-                      git config user.email github-actions[bot]@users.noreply.github.com
-                      git add README.md
-                      git commit -m "Update random fact in README" || echo "No changes to commit"
-                      git push
-                    env:
-                      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run Python script to update README
+        run: python update_readme.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email github-actions[bot]@users.noreply.github.com
+          git add README.md
+          git commit -m "Update random fact in README" || echo "No changes to commit"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
