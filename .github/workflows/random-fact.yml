@@ -25,32 +25,32 @@ jobs:
           echo "
           import random
           import os
-            facts = [
-              \"Built a Laravel MCP starter kit for tenant-aware apps.\",
-              \"Migrated legacy CodeIgniter apps into Laravel with AI help.\",
-              \"I create custom VS Code extensions just for fun.\",
-              \"Automated version bumping with my own GitHub Action.\",
-              \"Love mixing FastAPI with video workflows.\",
-              \"Dark mode and lofi = peak productivity.\",
-              \"I once broke production with a single missing comma.\",
-              \"I debug best with strong coffee in hand.\",
-              \"I write tools I wish already existed.\",
-              \"I built a Telegram bot with modular handlers.\",
-              \"Git commit messages are my form of storytelling.\",
-              \"MoviePy and FastAPI power my video experiments.\",
-              \"I forked youtube_metadata_verifier and made it better.\",
-              \"I prefer clean, modular code over quick hacks.\",
-              \"Sometimes I code just to automate coding itself.\",
-              \"DaVinci Resolve is my creative coding partner.\",
-              \"My VS Code setup changes more often than my wallpaper.\",
-              \"I enjoy turning monoliths into SaaS platforms.\",
-              \"I use CrewAI to teach old code new tricks.\",
-              \"My projects usually start as scratchpads, then evolve.\",
-              \"I think admins deserve beautiful dashboards too.\",
-              \"I once fixed a bug by rewriting the whole module.\",
-              \"I push commits with names only I can understand.\",
-              \"I like making tech feel fun, not scary.\"
-            ]
+          facts = [
+            \"Built a Laravel MCP starter kit for tenant-aware apps.\",
+            \"Migrated legacy CodeIgniter apps into Laravel with AI help.\",
+            \"I create custom VS Code extensions just for fun.\",
+            \"Automated version bumping with my own GitHub Action.\",
+            \"Love mixing FastAPI with video workflows.\",
+            \"Dark mode and lofi = peak productivity.\",
+            \"I once broke production with a single missing comma.\",
+            \"I debug best with strong coffee in hand.\",
+            \"I write tools I wish already existed.\",
+            \"I built a Telegram bot with modular handlers.\",
+            \"Git commit messages are my form of storytelling.\",
+            \"MoviePy and FastAPI power my video experiments.\",
+            \"I forked youtube_metadata_verifier and made it better.\",
+            \"I prefer clean, modular code over quick hacks.\",
+            \"Sometimes I code just to automate coding itself.\",
+            \"DaVinci Resolve is my creative coding partner.\",
+            \"My VS Code setup changes more often than my wallpaper.\",
+            \"I enjoy turning monoliths into SaaS platforms.\",
+            \"I use CrewAI to teach old code new tricks.\",
+            \"My projects usually start as scratchpads, then evolve.\",
+            \"I think admins deserve beautiful dashboards too.\",
+            \"I once fixed a bug by rewriting the whole module.\",
+            \"I push commits with names only I can understand.\",
+            \"I like making tech feel fun, not scary.\"
+          ]
 
 
 
