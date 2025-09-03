@@ -1,4 +1,5 @@
 # 👋 Hi, I'm Taj!
+![Profile Views](https://komarev.com/ghpvc/?username=taj54&color=blue)
 
 🌙 Late-night code whisperer & full-stack alchemist  
 🚀 Turning ideas into elegant apps with **Laravel**, **React**, and **Node.js**  
@@ -85,7 +86,6 @@
 ## 📊 GitHub Stats
 
 ![Taj's GitHub Stats](https://github-readme-stats.vercel.app/api?username=taj54&show_icons=true&theme=tokyonight&border_radius=10)  
-
 
 ---
 
