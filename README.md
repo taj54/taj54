@@ -1,5 +1,9 @@
 # 👋 Hi, I'm Taj!
 ![Profile Views](https://komarev.com/ghpvc/?username=taj54&color=blue)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077b5?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/tajul-islam-j)
+[![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github)](https://github.com/taj54)
+[![Portfolio](https://img.shields.io/badge/-Portfolio-24292f?style=flat-square&logo=githubpages)](https://taj54.github.io)
+[![VS Code Marketplace](https://img.shields.io/badge/-VSCode%20Marketplace-007ACC?style=flat-square&logo=visualstudiocode)](https://marketplace.visualstudio.com/publishers/taj154dev)
 
 🌙 Late-night code whisperer & full-stack alchemist  
 🚀 Turning ideas into elegant apps with **Laravel**, **React**, and **Node.js**  
@@ -93,14 +97,6 @@
 
 ![Taj's GitHub Stats](https://github-readme-stats.vercel.app/api?username=taj54&show_icons=true&theme=tokyonight&border_radius=10)  
 
----
-
-## 🌐 Connect With Me
-
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077b5?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/tajul-islam-j)
-[![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github)](https://github.com/taj54)
-[![Portfolio](https://img.shields.io/badge/-Portfolio-24292f?style=flat-square&logo=githubpages)](https://taj54.github.io)
-[![VS Code Marketplace](https://img.shields.io/badge/-VSCode%20Marketplace-007ACC?style=flat-square&logo=visualstudiocode)](https://marketplace.visualstudio.com/publishers/taj154dev)
 
 ---
 
@@ -113,7 +109,14 @@
 
 ---
 
+## 📚 My Reading List
 
+- [Clean Code: A Handbook of Agile Software Craftsmanship](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
+    by Robert C. Martin (Uncle Bob)
+
+- [Clean Architecture: A Craftsman's Guide to Software Structure and Design](https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164) by Robert C. Martin (Uncle Bob)
+
+---
 
 > *"Clean architecture is about intent: your system should scream what it does."*  
 > — Uncle Bob (Robert C. Martin)
