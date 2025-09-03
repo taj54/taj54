@@ -100,6 +100,15 @@
 
 ---
 
+## 📚 My Reading List
+
+- [Clean Code: A Handbook of Agile Software Craftsmanship](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
+    by Robert C. Martin (Uncle Bob)
+
+- [Clean Architecture: A Craftsman's Guide to Software Structure and Design](https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164) by Robert C. Martin (Uncle Bob)
+
+---
+
 ## ✨ Fun Facts
 
 - 💡 Clean code evangelist & architecture nerd
@@ -109,14 +118,7 @@
 
 ---
 
-## 📚 My Reading List
 
-- [Clean Code: A Handbook of Agile Software Craftsmanship](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
-    by Robert C. Martin (Uncle Bob)
-
-- [Clean Architecture: A Craftsman's Guide to Software Structure and Design](https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164) by Robert C. Martin (Uncle Bob)
-
----
 
 > *"Clean architecture is about intent: your system should scream what it does."*  
 > — Uncle Bob (Robert C. Martin)
