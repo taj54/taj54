@@ -112,7 +112,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- My code is 90% comments, 10% actual code.
+- Love mixing FastAPI with video workflows.
 <!-- RANDOM_FACT_END -->
 
 ---
