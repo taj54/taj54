@@ -112,7 +112,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- Sometimes I code just to automate coding itself.
+- My projects usually start as scratchpads, then evolve.
 <!-- RANDOM_FACT_END -->
 
 ---
