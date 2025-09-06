@@ -112,7 +112,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- My projects usually start as scratchpads, then evolve.
+- Love mixing FastAPI with video workflows.
 <!-- RANDOM_FACT_END -->
 
 ---
