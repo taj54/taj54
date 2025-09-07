@@ -112,7 +112,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- Love mixing FastAPI with video workflows.
+- I use CrewAI to teach old code new tricks.
 <!-- RANDOM_FACT_END -->
 
 ---
