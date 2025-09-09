@@ -112,7 +112,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- I use CrewAI to teach old code new tricks.
+- I write tools I wish already existed.
 <!-- RANDOM_FACT_END -->
 
 ---
