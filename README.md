@@ -112,7 +112,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- Dark mode and lofi = peak productivity.
+- I debug best with strong coffee in hand.
 <!-- RANDOM_FACT_END -->
 
 ---
