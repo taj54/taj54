@@ -3,7 +3,8 @@ name: Update Random Fact
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *' # Runs daily at 00:00 UTC
+    - cron: '0 0 * * 1' # Runs weekly on Monday at 00:00 UTC  
+    
 
 permissions:
   contents: write
