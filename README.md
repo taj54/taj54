@@ -112,7 +112,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- I debug best with strong coffee in hand.
+- DaVinci Resolve is my creative coding partner.
 <!-- RANDOM_FACT_END -->
 
 ---
