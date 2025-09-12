@@ -112,7 +112,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- DaVinci Resolve is my creative coding partner.
+- I like making tech feel fun, not scary.
 <!-- RANDOM_FACT_END -->
 
 ---
