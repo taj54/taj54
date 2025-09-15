@@ -112,7 +112,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- I like making tech feel fun, not scary.
+- My projects usually start as scratchpads, then evolve.
 <!-- RANDOM_FACT_END -->
 
 ---
