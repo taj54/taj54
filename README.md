@@ -117,6 +117,11 @@
 
 ---
 
+> 💌 Want to team up for an open-source quest?  
+> DM me on [LinkedIn](https://www.linkedin.com/in/tajul-islam-j) or send a carrier pigeon 🕊️
+
+---
+
 ## ✨ Fun Facts
 
 - 💡 Clean code evangelist & architecture nerd
