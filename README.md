@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- My projects usually start as scratchpads, then evolve.
+- I write tools I wish already existed.
 <!-- RANDOM_FACT_END -->
 
 ---
