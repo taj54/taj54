@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- I like making tech feel fun, not scary.
+- Migrated legacy CodeIgniter apps into Laravel with AI help.
 <!-- RANDOM_FACT_END -->
 
 ---
