@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- Migrated legacy CodeIgniter apps into Laravel with AI help.
+- I once broke production with a single missing comma.
 <!-- RANDOM_FACT_END -->
 
 ---
