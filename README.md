@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- I once broke production with a single missing comma.
+- I use CrewAI to teach old code new tricks.
 <!-- RANDOM_FACT_END -->
 
 ---
