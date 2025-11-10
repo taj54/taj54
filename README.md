@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- I think admins deserve beautiful dashboards too.
+- I like making tech feel fun, not scary.
 <!-- RANDOM_FACT_END -->
 
 ---
