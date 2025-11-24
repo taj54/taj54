@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- My projects usually start as scratchpads, then evolve.
+- MoviePy and FastAPI power my video experiments.
 <!-- RANDOM_FACT_END -->
 
 ---
