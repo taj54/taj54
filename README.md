@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- Migrated legacy CodeIgniter apps into Laravel with AI help.
+- I create custom VS Code extensions just for fun.
 <!-- RANDOM_FACT_END -->
 
 ---
