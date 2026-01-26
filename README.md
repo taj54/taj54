@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- MoviePy and FastAPI power my video experiments.
+- I built a Telegram bot with modular handlers.
 <!-- RANDOM_FACT_END -->
 
 ---
