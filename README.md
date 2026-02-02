@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- I built a Telegram bot with modular handlers.
+- My projects usually start as scratchpads, then evolve.
 <!-- RANDOM_FACT_END -->
 
 ---
