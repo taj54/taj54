@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- I create custom VS Code extensions just for fun.
+- Love mixing FastAPI with video workflows.
 <!-- RANDOM_FACT_END -->
 
 ---
