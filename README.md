@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- Love mixing FastAPI with video workflows.
+- Dark mode and lofi = peak productivity.
 <!-- RANDOM_FACT_END -->
 
 ---
