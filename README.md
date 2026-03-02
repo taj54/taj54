@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- Dark mode and lofi = peak productivity.
+- My VS Code setup changes more often than my wallpaper.
 <!-- RANDOM_FACT_END -->
 
 ---
