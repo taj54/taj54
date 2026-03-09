@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- My VS Code setup changes more often than my wallpaper.
+- Git commit messages are my form of storytelling.
 <!-- RANDOM_FACT_END -->
 
 ---
