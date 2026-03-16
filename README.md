@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- Git commit messages are my form of storytelling.
+- Love mixing FastAPI with video workflows.
 <!-- RANDOM_FACT_END -->
 
 ---
