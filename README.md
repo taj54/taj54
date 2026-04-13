@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- I create custom VS Code extensions just for fun.
+- I use CrewAI to teach old code new tricks.
 <!-- RANDOM_FACT_END -->
 
 ---
