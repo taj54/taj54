@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- I use CrewAI to teach old code new tricks.
+- Built a Laravel MCP starter kit for tenant-aware apps.
 <!-- RANDOM_FACT_END -->
 
 ---
