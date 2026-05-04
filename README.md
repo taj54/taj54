@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- Built a Laravel MCP starter kit for tenant-aware apps.
+- I prefer clean, modular code over quick hacks.
 <!-- RANDOM_FACT_END -->
 
 ---
