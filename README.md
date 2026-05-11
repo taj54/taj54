@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- I prefer clean, modular code over quick hacks.
+- I once fixed a bug by rewriting the whole module.
 <!-- RANDOM_FACT_END -->
 
 ---
