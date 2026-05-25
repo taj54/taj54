@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- I prefer clean, modular code over quick hacks.
+- I like making tech feel fun, not scary.
 <!-- RANDOM_FACT_END -->
 
 ---
