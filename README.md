@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- Git commit messages are my form of storytelling.
+- I write tools I wish already existed.
 <!-- RANDOM_FACT_END -->
 
 ---
