@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- I write tools I wish already existed.
+- Dark mode and lofi = peak productivity.
 <!-- RANDOM_FACT_END -->
 
 ---
