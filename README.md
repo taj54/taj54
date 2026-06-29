@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- I debug best with strong coffee in hand.
+- I built a Telegram bot with modular handlers.
 <!-- RANDOM_FACT_END -->
 
 ---
