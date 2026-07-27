@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- I push commits with names only I can understand.
+- I forked youtube_metadata_verifier and made it better.
 <!-- RANDOM_FACT_END -->
 
 ---
