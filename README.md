@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- I prefer clean, modular code over quick hacks.
+- I forked youtube_metadata_verifier and made it better.
 <!-- RANDOM_FACT_END -->
 
 ---
