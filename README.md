@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- I forked youtube_metadata_verifier and made it better.
+- Git commit messages are my form of storytelling.
 <!-- RANDOM_FACT_END -->
 
 ---
