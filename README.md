@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- My projects usually start as scratchpads, then evolve.
+- I debug best with strong coffee in hand.
 <!-- RANDOM_FACT_END -->
 
 ---
