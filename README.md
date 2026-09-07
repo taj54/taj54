@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- I debug best with strong coffee in hand.
+- Sometimes I code just to automate coding itself.
 <!-- RANDOM_FACT_END -->
 
 ---
