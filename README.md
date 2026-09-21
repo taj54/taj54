@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- I debug best with strong coffee in hand.
+- I once broke production with a single missing comma.
 <!-- RANDOM_FACT_END -->
 
 ---
