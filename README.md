@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- I once broke production with a single missing comma.
+- I like making tech feel fun, not scary.
 <!-- RANDOM_FACT_END -->
 
 ---
