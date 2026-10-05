@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- I like making tech feel fun, not scary.
+- I built a Telegram bot with modular handlers.
 <!-- RANDOM_FACT_END -->
 
 ---
