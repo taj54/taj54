@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- I push commits with names only I can understand.
+- MoviePy and FastAPI power my video experiments.
 <!-- RANDOM_FACT_END -->
 
 ---
