@@ -115,7 +115,7 @@
 ## 💡 Random Fact
 
 <!-- RANDOM_FACT_START -->
-- MoviePy and FastAPI power my video experiments.
+- I prefer clean, modular code over quick hacks.
 <!-- RANDOM_FACT_END -->
 
 ---
