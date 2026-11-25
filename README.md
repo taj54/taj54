@@ -87,7 +87,6 @@
 </table>
 
 ---
-
 ## 🤝 Open Source & Featured Work
 
 ### 🎬 [Interactive Video Labs](https://github.com/interactive-video-labs) *(Core Contributor)*
