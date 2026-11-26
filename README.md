@@ -145,8 +145,9 @@ Architecting an ecosystem for cue-based, intelligent interactive video experienc
     <td width="50%" valign="top">
       <h3>💡 Random Dev Fact</h3>
       <!-- RANDOM_FACT_START -->
-- I prefer clean, modular code over quick hacks.
-      <!-- RANDOM_FACT_END -->
+- **Random Fact:** Migrated legacy CodeIgniter apps into Laravel with AI help.
+- **Live Activity:** Active recently in `interactive-video-labs/interactive-video-svelte-wrapper`.
+<!-- RANDOM_FACT_END -->
     </td>
     <td width="50%" valign="top">
       <h3>✨ Off the Clock</h3>
