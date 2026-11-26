@@ -145,8 +145,10 @@ Architecting an ecosystem for cue-based, intelligent interactive video experienc
     <td width="50%" valign="top">
       <h3>💡 Random Dev Fact</h3>
       <!-- RANDOM_FACT_START -->
-- **Random Fact:** I create custom VS Code extensions just for fun.
-- **Live Activity:** Latest push in [`interactive-video-labs/interactive-video-svelte-wrapper`](https://github.com/interactive-video-labs/interactive-video-svelte-wrapper): *Merge pull request #128 from taj54/main*
+> [!TIP]
+> **✨ Dev Trivia #19** — *My projects usually start as scratchpads, then evolve.*
+>
+> **⚡ Latest Signal:** Pushed to [`interactive-video-labs/interactive-video-svelte-wrapper`](https://github.com/interactive-video-labs/interactive-video-svelte-wrapper) — *"Merge pull request #128 from taj54/main"*
 <!-- RANDOM_FACT_END -->
     </td>
     <td width="50%" valign="top">
