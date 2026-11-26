@@ -2,13 +2,14 @@ import html
 import json
 import random
 import re
+import secrets
 import textwrap
 from datetime import datetime, timezone
 from pathlib import Path
 
 README_PATH = Path("README.md")
 STATE_PATH = Path(".github/fact_state.json")
-SVG_PATH = Path(".github/assets/dev-trivia.svg")
+ASSETS_DIR = Path(".github/assets")
 
 START_MARKER = "<!-- RANDOM_FACT_START -->"
 END_MARKER = "<!-- RANDOM_FACT_END -->"
@@ -65,6 +66,13 @@ def pick_next_fact(state: dict) -> tuple[int, int, tuple[str, str, str, str, str
     return chosen_idx + 1, len(used), CURATED_FACTS[chosen_idx]
 
 
+def cleanup_old_svgs(assets_dir: Path) -> None:
+    if not assets_dir.exists():
+        return
+    for old_file in assets_dir.glob("dev-trivia-*.svg"):
+        old_file.unlink()
+
+
 def build_svg_card(
     fact_num: int,
     seen_count: int,
@@ -113,15 +121,12 @@ def build_svg_card(
     </pattern>
   </defs>
 
-  <!-- Card Base -->
   <rect x="1" y="1" width="798" height="193" rx="16" fill="url(#bgGrad)" stroke="url(#accentGrad)" stroke-width="1.5"/>
   <rect x="1" y="1" width="798" height="193" rx="16" fill="url(#dots)"/>
   <rect x="1" y="1" width="798" height="193" rx="16" fill="url(#glowOrb)"/>
 
-  <!-- Top Accent Bar -->
   <rect x="32" y="1" width="140" height="3" rx="1.5" fill="url(#accentGrad)"/>
 
-  <!-- Header Badges -->
   <g transform="translate(32, 24)">
     <rect width="152" height="28" rx="14" fill="#1E293B" stroke="{c1}" stroke-opacity="0.5"/>
     <circle cx="16" cy="14" r="4" fill="{c1}">
@@ -137,25 +142,20 @@ def build_svg_card(
           font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">{cat_escaped}</text>
   </g>
 
-  <!-- Right Floating Emoji Emblem -->
   <g transform="translate(716, 22)">
     <rect width="52" height="52" rx="14" fill="#161F30" stroke="#334155" stroke-width="1"/>
     <text x="26" y="34" text-anchor="middle" font-size="25">{icon}</text>
   </g>
 
-  <!-- Main Fact Text -->
   {quote_svg}
 
-  <!-- Footer Divider -->
   <line x1="32" y1="154" x2="768" y2="154" stroke="#1E293B" stroke-width="1"/>
 
-  <!-- Cycle Progress Bar -->
   <text x="32" y="176" fill="#94A3B8" font-size="11" font-weight="600"
         font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">CYCLE {seen_count:02d}/{total:02d}</text>
   <rect x="118" y="168" width="220" height="7" rx="3.5" fill="#1E293B"/>
   <rect x="118" y="168" width="{progress_width}" height="7" rx="3.5" fill="url(#accentGrad)"/>
 
-  <!-- Timestamp -->
   <text x="768" y="176" text-anchor="end" fill="#64748B" font-size="11"
         font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">UPDATED {updated_date.upper()} • GITHUB ACTIONS</text>
 </svg>
@@ -183,21 +183,26 @@ def main() -> None:
     total = len(CURATED_FACTS)
     fact_num, seen_count, (icon, category, c1, c2, fact) = pick_next_fact(state)
 
-    SVG_PATH.parent.mkdir(parents=True, exist_ok=True)
-    SVG_PATH.write_text(
+    ASSETS_DIR.mkdir(parents=True, exist_ok=True)
+    cleanup_old_svgs(ASSETS_DIR)
+
+    token = secrets.token_hex(3)
+    svg_filename = f"dev-trivia-{fact_num:02d}-{token}.svg"
+    svg_path = ASSETS_DIR / svg_filename
+    svg_path.write_text(
         build_svg_card(fact_num, seen_count, total, icon, category, c1, c2, fact),
         encoding="utf-8",
     )
 
     block_body = (
         '<p align="center">\n'
-        '  <img src=".github/assets/dev-trivia.svg" alt="Dev Trivia Card" width="100%" />\n'
+        f'  <img src=".github/assets/{svg_filename}" alt="Dev Trivia Card" width="100%" />\n'
         '</p>'
     )
 
     update_readme(block_body)
     save_state(state)
-    print(f"Generated SVG card for Dev Trivia #{fact_num:02d} ({category}).")
+    print(f"Generated {svg_path} for Dev Trivia #{fact_num:02d} ({category}).")
 
 
 if __name__ == "__main__":
