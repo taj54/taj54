@@ -11,6 +11,8 @@ STATE_PATH = Path(".github/fact_state.json")
 START_MARKER = "<!-- RANDOM_FACT_START -->"
 END_MARKER = "<!-- RANDOM_FACT_END -->"
 
+FACT_BADGES = ["🎲", "💡", "🚀", "🛠️", "⚡", "🧠", "✨", "🔥"]
+
 CURATED_FACTS = [
     "Built a Laravel MCP starter kit for tenant-aware apps.",
     "Migrated legacy CodeIgniter apps into Laravel with AI help.",
@@ -73,10 +75,13 @@ def fetch_latest_push(username: str, token: str | None) -> str | None:
                         msg = repo_commits[0]["commit"]["message"].splitlines()[0]
                 except Exception:
                     pass
+            repo_link = f"[`{repo}`](https://github.com/{repo})"
             if msg:
-                return f"Latest push in [`{repo}`](https://github.com/{repo}): *{msg}*"
-            return f"Active recently in [`{repo}`](https://github.com/{repo})."
+                return f"Pushed to {repo_link} — *\"{msg}\"*"
+            return f"Building in {repo_link}"
     return None
+
+
 def load_state() -> dict:
     if STATE_PATH.exists():
         return json.loads(STATE_PATH.read_text(encoding="utf-8"))
@@ -88,7 +93,7 @@ def save_state(state: dict) -> None:
     STATE_PATH.write_text(json.dumps(state, indent=2) + "\n", encoding="utf-8")
 
 
-def pick_next_fact(state: dict) -> str:
+def pick_next_fact(state: dict) -> tuple[int, str]:
     used = set(state.get("used_indices", []))
     available = [i for i in range(len(CURATED_FACTS)) if i not in used]
     if not available:
@@ -98,7 +103,7 @@ def pick_next_fact(state: dict) -> str:
     chosen_idx = random.choice(available)
     used.add(chosen_idx)
     state["used_indices"] = sorted(used)
-    return CURATED_FACTS[chosen_idx]
+    return chosen_idx + 1, CURATED_FACTS[chosen_idx]
 
 
 def update_readme(block_body: str) -> None:
@@ -119,19 +124,26 @@ def update_readme(block_body: str) -> None:
 
 def main() -> None:
     state = load_state()
-    fact = pick_next_fact(state)
+    fact_num, fact = pick_next_fact(state)
+    badge = random.choice(FACT_BADGES)
     activity = fetch_latest_push(
         os.getenv("GITHUB_ACTOR", ""),
         os.getenv("GITHUB_TOKEN"),
     )
 
-    lines = [f"- **Random Fact:** {fact}"]
+    lines = [
+        "> [!TIP]",
+        f"> **{badge} Dev Trivia #{fact_num:02d}** — *{fact}*",
+    ]
     if activity:
-        lines.append(f"- **Live Activity:** {activity}")
+        lines.extend([
+            ">",
+            f"> **⚡ Latest Signal:** {activity}",
+        ])
 
     update_readme("\n".join(lines))
     save_state(state)
-    print("Updated README and fact state.")
+    print(f"Updated README with Dev Trivia #{fact_num:02d}.")
 
 
 if __name__ == "__main__":
