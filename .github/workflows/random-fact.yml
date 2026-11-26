@@ -1,105 +1,43 @@
-name: Update Random Fact
+name: Update Dynamic README Highlights
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * 1' # Runs weekly on Monday at 00:00 UTC  
-    
+    - cron: '0 0 * * 1' # Weekly on Monday at 00:00 UTC
 
 permissions:
   contents: write
 
 jobs:
-  update-fact:
+  update-readme:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: '3.12'
+          cache: 'pip'
 
-      - name: Write Python script
-        run: |
-          echo "
-          import random
-          import os
-          facts = [
-            \"Built a Laravel MCP starter kit for tenant-aware apps.\",
-            \"Migrated legacy CodeIgniter apps into Laravel with AI help.\",
-            \"I create custom VS Code extensions just for fun.\",
-            \"Automated version bumping with my own GitHub Action.\",
-            \"Love mixing FastAPI with video workflows.\",
-            \"Dark mode and lofi = peak productivity.\",
-            \"I once broke production with a single missing comma.\",
-            \"I debug best with strong coffee in hand.\",
-            \"I write tools I wish already existed.\",
-            \"I built a Telegram bot with modular handlers.\",
-            \"Git commit messages are my form of storytelling.\",
-            \"MoviePy and FastAPI power my video experiments.\",
-            \"I forked youtube_metadata_verifier and made it better.\",
-            \"I prefer clean, modular code over quick hacks.\",
-            \"Sometimes I code just to automate coding itself.\",
-            \"My VS Code setup changes more often than my wallpaper.\",
-            \"I enjoy turning monoliths into SaaS platforms.\",
-            \"I use CrewAI to teach old code new tricks.\",
-            \"My projects usually start as scratchpads, then evolve.\",
-            \"I think admins deserve beautiful dashboards too.\",
-            \"I once fixed a bug by rewriting the whole module.\",
-            \"I push commits with names only I can understand.\",
-            \"I like making tech feel fun, not scary.\"
-          ]
-
-
-
-          random_fact = random.choice(facts)
-
-          readme_path = 'README.md'
-          with open(readme_path, 'r', encoding='utf-8') as f:
-              readme_content = f.read()
-
-          # Define the markers for the random fact section
-          start_marker = '<!-- RANDOM_FACT_START -->'
-          end_marker = '<!-- RANDOM_FACT_END -->'
-
-          # Ensure markers exist, if not, the script will fail or behave unexpectedly
-          if start_marker not in readme_content or end_marker not in readme_content:
-              print('Error: RANDOM_FACT_START or RANDOM_FACT_END markers not found in README.md')
-              exit(1)
-
-          # Replace the content between markers
-          new_readme_content = []
-          in_fact_section = False
-          for line in readme_content.splitlines():
-              if start_marker in line:
-                  in_fact_section = True
-                  new_readme_content.append(line)
-                  new_readme_content.append(f'- {random_fact}') # Add the new fact
-              elif end_marker in line:
-                  in_fact_section = False
-                  new_readme_content.append(line)
-              elif not in_fact_section:
-                  new_readme_content.append(line)
-
-          updated_content = '\\n'.join(new_readme_content)
-
-          with open(readme_path, 'w', encoding='utf-8') as f:
-              f.write(updated_content)
-
-          print(f'README.md updated with fact: {random_fact}')
-          " > update_readme.py
-
-      - name: Run Python script to update README
-        run: python update_readme.py
+      - name: Update README dynamically
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_ACTOR: ${{ github.actor }}
+        run: python .github/scripts/update_readme.py
 
       - name: Commit and push changes
         run: |
-          git config user.name github-actions[bot]
-          git config user.email github-actions[bot]@users.noreply.github.com
-          git add README.md
-          git commit -m "Update random fact in README" || echo "No changes to commit"
+          if git diff --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md .github/fact_state.json
+          git commit -m "chore(readme): rotate dynamic fact and latest activity"
+          git pull --rebase origin "${GITHUB_REF_NAME:-main}"
           git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
