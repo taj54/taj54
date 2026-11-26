@@ -6,12 +6,12 @@
       <stop offset="100%" stop-color="#0D1117"/>
     </linearGradient>
     <linearGradient id="accentGrad" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#A855F7"/>
-      <stop offset="100%" stop-color="#C084FC"/>
+      <stop offset="0%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#F472B6"/>
     </linearGradient>
     <radialGradient id="glowOrb" cx="0.88" cy="0.2" r="0.55">
-      <stop offset="0%" stop-color="#A855F7" stop-opacity="0.22"/>
-      <stop offset="100%" stop-color="#A855F7" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#EC4899" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#EC4899" stop-opacity="0"/>
     </radialGradient>
     <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1" fill="#FFFFFF" fill-opacity="0.04"/>
@@ -25,33 +25,33 @@
   <rect x="32" y="1" width="140" height="3" rx="1.5" fill="url(#accentGrad)"/>
 
   <g transform="translate(32, 24)">
-    <rect width="152" height="28" rx="14" fill="#1E293B" stroke="#A855F7" stroke-opacity="0.5"/>
-    <circle cx="16" cy="14" r="4" fill="#A855F7">
+    <rect width="152" height="28" rx="14" fill="#1E293B" stroke="#EC4899" stroke-opacity="0.5"/>
+    <circle cx="16" cy="14" r="4" fill="#EC4899">
       <animate attributeName="opacity" values="1;0.3;1" dur="2.4s" repeatCount="indefinite"/>
     </circle>
     <text x="28" y="18" fill="#F1F5F9" font-size="11" font-weight="700" letter-spacing="1.1"
-          font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">DEV TRIVIA #16</text>
+          font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">DEV TRIVIA #12</text>
   </g>
 
   <g transform="translate(194, 24)">
-    <rect width="124" height="28" rx="14" fill="#A855F7" fill-opacity="0.14" stroke="#A855F7" stroke-opacity="0.35"/>
-    <text x="62" y="18" text-anchor="middle" fill="#C084FC" font-size="11" font-weight="700" letter-spacing="1"
-          font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">SETUP TWEAKS</text>
+    <rect width="108" height="28" rx="14" fill="#EC4899" fill-opacity="0.14" stroke="#EC4899" stroke-opacity="0.35"/>
+    <text x="54" y="18" text-anchor="middle" fill="#F472B6" font-size="11" font-weight="700" letter-spacing="1"
+          font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">VIDEO LABS</text>
   </g>
 
   <g transform="translate(716, 22)">
     <rect width="52" height="52" rx="14" fill="#161F30" stroke="#334155" stroke-width="1"/>
-    <text x="26" y="34" text-anchor="middle" font-size="25">🎨</text>
+    <rect x="14" y="16" width="24" height="20" rx="3" stroke="#F472B6" stroke-width="2"/><polygon points="23,21 31,26 23,31" fill="#F472B6"/>
   </g>
 
-  <text x="32" y="102" fill="#F8FAFC" font-size="21" font-weight="600" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">&quot;My VS Code setup changes more often than my wallpaper.&quot;</text>
+  <text x="32" y="102" fill="#F8FAFC" font-size="21" font-weight="600" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">&quot;MoviePy and FastAPI power my video experiments.&quot;</text>
 
   <line x1="32" y1="154" x2="768" y2="154" stroke="#1E293B" stroke-width="1"/>
 
   <text x="32" y="176" fill="#94A3B8" font-size="11" font-weight="600"
-        font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">CYCLE 09/23</text>
+        font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">CYCLE 10/23</text>
   <rect x="118" y="168" width="220" height="7" rx="3.5" fill="#1E293B"/>
-  <rect x="118" y="168" width="86" height="7" rx="3.5" fill="url(#accentGrad)"/>
+  <rect x="118" y="168" width="95" height="7" rx="3.5" fill="url(#accentGrad)"/>
 
   <text x="768" y="176" text-anchor="end" fill="#64748B" font-size="11"
         font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">UPDATED NOV 26, 2026 • GITHUB ACTIONS</text>
