@@ -145,8 +145,9 @@ Architecting an ecosystem for cue-based, intelligent interactive video experienc
     <td width="50%" valign="top">
       <h3>💡 Random Dev Fact</h3>
       <!-- RANDOM_FACT_START -->
-> [!TIP]
-> **🚀 Dev Trivia #17** — *I enjoy turning monoliths into SaaS platforms.*
+<p align="center">
+  <img src=".github/assets/dev-trivia.svg" alt="Dev Trivia Card" width="100%" />
+</p>
 <!-- RANDOM_FACT_END -->
     </td>
     <td width="50%" valign="top">
