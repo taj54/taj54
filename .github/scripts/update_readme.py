@@ -14,31 +14,31 @@ ASSETS_DIR = Path(".github/assets")
 START_MARKER = "<!-- RANDOM_FACT_START -->"
 END_MARKER = "<!-- RANDOM_FACT_END -->"
 
-# (icon, category, primary_hex, secondary_hex, fact_text)
+# (emblem_key, category, primary_hex, secondary_hex, fact_text)
 CURATED_FACTS = [
-    ("🏗️", "ARCHITECTURE", "#0EA5E9", "#38BDF8", "Built a Laravel MCP starter kit for tenant-aware apps."),
-    ("🤖", "AI & MIGRATION", "#8B5CF6", "#C084FC", "Migrated legacy CodeIgniter apps into Laravel with AI help."),
-    ("🧩", "DEV TOOLS", "#10B981", "#34D399", "I create custom VS Code extensions just for fun."),
-    ("⚙️", "AUTOMATION", "#F59E0B", "#FBBF24", "Automated version bumping with my own GitHub Action."),
-    ("🎬", "MEDIA & API", "#EC4899", "#F472B6", "Love mixing FastAPI with video workflows."),
-    ("🎧", "FLOW STATE", "#6366F1", "#818CF8", "Dark mode and lofi = peak productivity."),
-    ("💥", "WAR STORIES", "#EF4444", "#F87171", "I once broke production with a single missing comma."),
-    ("☕", "DEBUGGING", "#D97706", "#F59E0B", "I debug best with strong coffee in hand."),
-    ("🛠️", "BUILDER MINDSET", "#14B8A6", "#2DD4BF", "I write tools I wish already existed."),
-    ("🤖", "BOTS & HOOKS", "#3B82F6", "#60A5FA", "I built a Telegram bot with modular handlers."),
-    ("📖", "GIT CRAFT", "#F97316", "#FB923C", "Git commit messages are my form of storytelling."),
-    ("🎞️", "VIDEO LABS", "#EC4899", "#F472B6", "MoviePy and FastAPI power my video experiments."),
-    ("🔍", "OPEN SOURCE", "#22C55E", "#4ADE80", "I forked youtube_metadata_verifier and made it better."),
-    ("🧼", "CLEAN CODE", "#06B6D4", "#22D3EE", "I prefer clean, modular code over quick hacks."),
-    ("♾️", "META CODING", "#8B5CF6", "#A78BFA", "Sometimes I code just to automate coding itself."),
-    ("🎨", "SETUP TWEAKS", "#A855F7", "#C084FC", "My VS Code setup changes more often than my wallpaper."),
-    ("🚀", "SAAS SCALE", "#2563EB", "#60A5FA", "I enjoy turning monoliths into SaaS platforms."),
-    ("🧠", "AI AGENTS", "#7C3AED", "#A78BFA", "I use CrewAI to teach old code new tricks."),
-    ("✨", "WORKFLOW", "#8B5CF6", "#EC4899", "My projects usually start as scratchpads, then evolve."),
-    ("📊", "UI & UX", "#0284C7", "#38BDF8", "I think admins deserve beautiful dashboards too."),
-    ("🔥", "REFACTORING", "#DC2626", "#F87171", "I once fixed a bug by rewriting the whole module."),
-    ("🕵️", "GIT LORE", "#4F46E5", "#818CF8", "I push commits with names only I can understand."),
-    ("🎉", "PHILOSOPHY", "#16A34A", "#4ADE80", "I like making tech feel fun, not scary."),
+    ("arch", "ARCHITECTURE", "#0EA5E9", "#38BDF8", "Built a Laravel MCP starter kit for tenant-aware apps."),
+    ("ai", "AI & MIGRATION", "#8B5CF6", "#C084FC", "Migrated legacy CodeIgniter apps into Laravel with AI help."),
+    ("tools", "DEV TOOLS", "#10B981", "#34D399", "I create custom VS Code extensions just for fun."),
+    ("auto", "AUTOMATION", "#F59E0B", "#FBBF24", "Automated version bumping with my own GitHub Action."),
+    ("media", "MEDIA & API", "#EC4899", "#F472B6", "Love mixing FastAPI with video workflows."),
+    ("flow", "FLOW STATE", "#6366F1", "#818CF8", "Dark mode and lofi = peak productivity."),
+    ("war", "WAR STORIES", "#EF4444", "#F87171", "I once broke production with a single missing comma."),
+    ("coffee", "DEBUGGING", "#D97706", "#F59E0B", "I debug best with strong coffee in hand."),
+    ("tools", "BUILDER MINDSET", "#14B8A6", "#2DD4BF", "I write tools I wish already existed."),
+    ("ai", "BOTS & HOOKS", "#3B82F6", "#60A5FA", "I built a Telegram bot with modular handlers."),
+    ("git", "GIT CRAFT", "#F97316", "#FB923C", "Git commit messages are my form of storytelling."),
+    ("media", "VIDEO LABS", "#EC4899", "#F472B6", "MoviePy and FastAPI power my video experiments."),
+    ("git", "OPEN SOURCE", "#22C55E", "#4ADE80", "I forked youtube_metadata_verifier and made it better."),
+    ("tools", "CLEAN CODE", "#06B6D4", "#22D3EE", "I prefer clean, modular code over quick hacks."),
+    ("auto", "META CODING", "#8B5CF6", "#A78BFA", "Sometimes I code just to automate coding itself."),
+    ("spark", "SETUP TWEAKS", "#A855F7", "#C084FC", "My VS Code setup changes more often than my wallpaper."),
+    ("arch", "SAAS SCALE", "#2563EB", "#60A5FA", "I enjoy turning monoliths into SaaS platforms."),
+    ("ai", "AI AGENTS", "#7C3AED", "#A78BFA", "I use CrewAI to teach old code new tricks."),
+    ("spark", "WORKFLOW", "#8B5CF6", "#EC4899", "My projects usually start as scratchpads, then evolve."),
+    ("arch", "UI & UX", "#0284C7", "#38BDF8", "I think admins deserve beautiful dashboards too."),
+    ("war", "REFACTORING", "#DC2626", "#F87171", "I once fixed a bug by rewriting the whole module."),
+    ("git", "GIT LORE", "#4F46E5", "#818CF8", "I push commits with names only I can understand."),
+    ("spark", "PHILOSOPHY", "#16A34A", "#4ADE80", "I like making tech feel fun, not scary."),
 ]
 
 
@@ -73,11 +73,63 @@ def cleanup_old_svgs(assets_dir: Path) -> None:
         old_file.unlink()
 
 
+def emblem_svg(icon_key: str, accent: str) -> str:
+    icons = {
+        "arch": (
+            f'<rect x="14" y="15" width="10" height="10" rx="2" stroke="{accent}" stroke-width="2"/>'
+            f'<rect x="28" y="15" width="10" height="10" rx="2" stroke="{accent}" stroke-width="2"/>'
+            f'<rect x="21" y="28" width="10" height="10" rx="2" stroke="{accent}" stroke-width="2"/>'
+        ),
+        "ai": (
+            f'<circle cx="26" cy="26" r="7" stroke="{accent}" stroke-width="2"/>'
+            f'<circle cx="26" cy="26" r="2.5" fill="{accent}"/>'
+            f'<path d="M26 12v5M26 35v5M12 26h5M35 26h5" stroke="{accent}" stroke-width="2" stroke-linecap="round"/>'
+        ),
+        "tools": (
+            f'<path d="M21 18l-7 8 7 8M31 18l7 8-7 8M28 15l-4 22" '
+            f'stroke="{accent}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>'
+        ),
+        "auto": f'<path d="M28 13L16 28h9l-1 11 12-15h-9l1-11z" fill="{accent}"/>',
+        "media": (
+            f'<rect x="14" y="16" width="24" height="20" rx="3" stroke="{accent}" stroke-width="2"/>'
+            f'<polygon points="23,21 31,26 23,31" fill="{accent}"/>'
+        ),
+        "flow": (
+            f'<path d="M14 26c3-7 9-7 12 0s9 7 12 0" '
+            f'stroke="{accent}" stroke-width="2.2" stroke-linecap="round" fill="none"/>'
+        ),
+        "war": (
+            f'<path d="M26 14l11 21H15L26 14z" stroke="{accent}" stroke-width="2" stroke-linejoin="round"/>'
+            f'<line x1="26" y1="22" x2="26" y2="29" stroke="{accent}" stroke-width="2.2" stroke-linecap="round"/>'
+            f'<circle cx="26" cy="32.5" r="1.3" fill="{accent}"/>'
+        ),
+        "coffee": (
+            f'<path d="M16 20h16v9a6 6 0 0 1-6 6h-4a6 6 0 0 1-6-6v-9z" stroke="{accent}" stroke-width="2"/>'
+            f'<path d="M32 22h3a3 3 0 0 1 0 6h-3" stroke="{accent}" stroke-width="2"/>'
+            f'<line x1="16" y1="38" x2="32" y2="38" stroke="{accent}" stroke-width="2" stroke-linecap="round"/>'
+        ),
+        "git": (
+            f'<circle cx="19" cy="18" r="3" stroke="{accent}" stroke-width="2"/>'
+            f'<circle cx="19" cy="34" r="3" stroke="{accent}" stroke-width="2"/>'
+            f'<circle cx="33" cy="24" r="3" stroke="{accent}" stroke-width="2"/>'
+            f'<path d="M19 21v10M19 24c0 3 14 3 14 0" stroke="{accent}" stroke-width="2"/>'
+        ),
+        "spark": f'<path d="M26 13l3 9 9 3-9 3-3 9-3-9-9-3 9-3 3-9z" fill="{accent}"/>',
+    }
+    body = icons.get(icon_key, icons["spark"])
+    return (
+        '<g transform="translate(716, 22)">\n'
+        '    <rect width="52" height="52" rx="14" fill="#161F30" stroke="#334155" stroke-width="1"/>\n'
+        f'    {body}\n'
+        '  </g>'
+    )
+
+
 def build_svg_card(
     fact_num: int,
     seen_count: int,
     total: int,
-    icon: str,
+    emblem_key: str,
     category: str,
     c1: str,
     c2: str,
@@ -142,10 +194,7 @@ def build_svg_card(
           font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">{cat_escaped}</text>
   </g>
 
-  <g transform="translate(716, 22)">
-    <rect width="52" height="52" rx="14" fill="#161F30" stroke="#334155" stroke-width="1"/>
-    <text x="26" y="34" text-anchor="middle" font-size="25">{icon}</text>
-  </g>
+  {emblem_svg(emblem_key, c2)}
 
   {quote_svg}
 
@@ -181,7 +230,7 @@ def update_readme(block_body: str) -> None:
 def main() -> None:
     state = load_state()
     total = len(CURATED_FACTS)
-    fact_num, seen_count, (icon, category, c1, c2, fact) = pick_next_fact(state)
+    fact_num, seen_count, (emblem_key, category, c1, c2, fact) = pick_next_fact(state)
 
     ASSETS_DIR.mkdir(parents=True, exist_ok=True)
     cleanup_old_svgs(ASSETS_DIR)
@@ -190,7 +239,7 @@ def main() -> None:
     svg_filename = f"dev-trivia-{fact_num:02d}-{token}.svg"
     svg_path = ASSETS_DIR / svg_filename
     svg_path.write_text(
-        build_svg_card(fact_num, seen_count, total, icon, category, c1, c2, fact),
+        build_svg_card(fact_num, seen_count, total, emblem_key, category, c1, c2, fact),
         encoding="utf-8",
     )
 
