@@ -146,7 +146,7 @@ Architecting an ecosystem for cue-based, intelligent interactive video experienc
       <h3>💡 Random Dev Fact</h3>
       <!-- RANDOM_FACT_START -->
 <p align="center">
-  <img src=".github/assets/dev-trivia-12-a3a136.svg" alt="Dev Trivia Card" width="100%" />
+  <img src=".github/assets/dev-trivia-20-0dee36.svg" alt="Dev Trivia Card" width="100%" />
 </p>
 <!-- RANDOM_FACT_END -->
     </td>
