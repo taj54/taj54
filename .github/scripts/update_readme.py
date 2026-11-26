@@ -1,8 +1,6 @@
 import json
-import os
 import random
 import re
-import urllib.request
 from pathlib import Path
 
 README_PATH = Path("README.md")
@@ -38,48 +36,6 @@ CURATED_FACTS = [
     "I push commits with names only I can understand.",
     "I like making tech feel fun, not scary.",
 ]
-
-
-def fetch_latest_push(username: str, token: str | None) -> str | None:
-    if not username:
-        return None
-    headers = {
-        "Accept": "application/vnd.github+json",
-        "User-Agent": "readme-dynamic-updater",
-    }
-    if token:
-        headers["Authorization"] = f"Bearer {token}"
-
-    def get_json(url: str):
-        req = urllib.request.Request(url, headers=headers)
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            return json.loads(resp.read().decode("utf-8"))
-
-    try:
-        events = get_json(f"https://api.github.com/users/{username}/events/public?per_page=30")
-    except Exception as exc:
-        print(f"Warning: could not fetch GitHub events ({exc})")
-        return None
-
-    for event in events:
-        if event.get("type") == "PushEvent":
-            repo = event.get("repo", {}).get("name", "")
-            if not repo:
-                continue
-            commits = event.get("payload", {}).get("commits", [])
-            msg = commits[-1].get("message", "").splitlines()[0] if commits else ""
-            if not msg:
-                try:
-                    repo_commits = get_json(f"https://api.github.com/repos/{repo}/commits?per_page=1")
-                    if repo_commits:
-                        msg = repo_commits[0]["commit"]["message"].splitlines()[0]
-                except Exception:
-                    pass
-            repo_link = f"[`{repo}`](https://github.com/{repo})"
-            if msg:
-                return f"Pushed to {repo_link} — *\"{msg}\"*"
-            return f"Building in {repo_link}"
-    return None
 
 
 def load_state() -> dict:
@@ -126,22 +82,13 @@ def main() -> None:
     state = load_state()
     fact_num, fact = pick_next_fact(state)
     badge = random.choice(FACT_BADGES)
-    activity = fetch_latest_push(
-        os.getenv("GITHUB_ACTOR", ""),
-        os.getenv("GITHUB_TOKEN"),
-    )
 
-    lines = [
+    block_body = "\n".join([
         "> [!TIP]",
         f"> **{badge} Dev Trivia #{fact_num:02d}** — *{fact}*",
-    ]
-    if activity:
-        lines.extend([
-            ">",
-            f"> **⚡ Latest Signal:** {activity}",
-        ])
+    ])
 
-    update_readme("\n".join(lines))
+    update_readme(block_body)
     save_state(state)
     print(f"Updated README with Dev Trivia #{fact_num:02d}.")
 
