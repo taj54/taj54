@@ -145,8 +145,8 @@ Architecting an ecosystem for cue-based, intelligent interactive video experienc
     <td width="50%" valign="top">
       <h3>💡 Random Dev Fact</h3>
       <!-- RANDOM_FACT_START -->
-- **Random Fact:** Migrated legacy CodeIgniter apps into Laravel with AI help.
-- **Live Activity:** Active recently in `interactive-video-labs/interactive-video-svelte-wrapper`.
+- **Random Fact:** I create custom VS Code extensions just for fun.
+- **Live Activity:** Latest push in [`interactive-video-labs/interactive-video-svelte-wrapper`](https://github.com/interactive-video-labs/interactive-video-svelte-wrapper): *Merge pull request #128 from taj54/main*
 <!-- RANDOM_FACT_END -->
     </td>
     <td width="50%" valign="top">
