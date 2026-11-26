@@ -22,18 +22,18 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Generate SVG Dev Trivia card and update README
+      - name: Generate randomized SVG Dev Trivia card and update README
         run: python .github/scripts/update_readme.py
 
       - name: Commit and push changes
         run: |
-          if git diff --quiet; then
+          if git diff --quiet && [ -z "$(git status --porcelain)" ]; then
             echo "No changes to commit."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md .github/fact_state.json .github/assets/dev-trivia.svg
-          git commit -m "chore(readme): update animated Dev Trivia SVG card"
+          git add README.md .github/fact_state.json .github/assets
+          git commit -m "feat(readme): randomize dev-trivia SVG filename to prevent image caching"
           git pull --rebase origin "${GITHUB_REF_NAME:-main}"
           git push
