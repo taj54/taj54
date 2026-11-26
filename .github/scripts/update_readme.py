@@ -41,7 +41,6 @@ CURATED_FACTS = [
 def fetch_latest_push(username: str, token: str | None) -> str | None:
     if not username:
         return None
-    url = f"https://api.github.com/users/{username}/events/public?per_page=30"
     headers = {
         "Accept": "application/vnd.github+json",
         "User-Agent": "readme-dynamic-updater",
@@ -49,10 +48,13 @@ def fetch_latest_push(username: str, token: str | None) -> str | None:
     if token:
         headers["Authorization"] = f"Bearer {token}"
 
-    req = urllib.request.Request(url, headers=headers)
-    try:
+    def get_json(url: str):
+        req = urllib.request.Request(url, headers=headers)
         with urllib.request.urlopen(req, timeout=10) as resp:
-            events = json.loads(resp.read().decode("utf-8"))
+            return json.loads(resp.read().decode("utf-8"))
+
+    try:
+        events = get_json(f"https://api.github.com/users/{username}/events/public?per_page=30")
     except Exception as exc:
         print(f"Warning: could not fetch GitHub events ({exc})")
         return None
@@ -60,15 +62,21 @@ def fetch_latest_push(username: str, token: str | None) -> str | None:
     for event in events:
         if event.get("type") == "PushEvent":
             repo = event.get("repo", {}).get("name", "")
+            if not repo:
+                continue
             commits = event.get("payload", {}).get("commits", [])
             msg = commits[-1].get("message", "").splitlines()[0] if commits else ""
-            if repo and msg:
-                return f"Latest push in `{repo}`: *{msg}*"
-            if repo:
-                return f"Active recently in `{repo}`."
+            if not msg:
+                try:
+                    repo_commits = get_json(f"https://api.github.com/repos/{repo}/commits?per_page=1")
+                    if repo_commits:
+                        msg = repo_commits[0]["commit"]["message"].splitlines()[0]
+                except Exception:
+                    pass
+            if msg:
+                return f"Latest push in [`{repo}`](https://github.com/{repo}): *{msg}*"
+            return f"Active recently in [`{repo}`](https://github.com/{repo})."
     return None
-
-
 def load_state() -> dict:
     if STATE_PATH.exists():
         return json.loads(STATE_PATH.read_text(encoding="utf-8"))
