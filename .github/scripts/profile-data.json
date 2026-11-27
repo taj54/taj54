@@ -57,11 +57,6 @@
   ],
   "projects": [
     {
-      "name": "🛠️ **GKAutomobiles**",
-      "description": "End-to-end automotive service center & operations platform",
-      "focus": "Full-Stack Web, Workflow Automation"
-    },
-    {
       "name": "🧱 **Quicke B2B/B2C**",
       "description": "Scalable multi-tenant e-commerce architecture",
       "focus": "Multi-Tenancy, API Design, High Availability"
