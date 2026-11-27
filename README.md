@@ -1,12 +1,9 @@
 <div align="center">
 
 <!-- PROFILE_BANNER_START -->
-<div align="center">
-  <img
-    src=".github/assets/profile-banner.svg"
-    width="100%"
-    alt="Taj - Full-Stack Product Engineer"/>
-</div>
+<p align="center">
+  <img src=".github/assets/profile-banner.svg" alt="Tajul Islam — Full-Stack Product Engineer" width="100%">
+</p>
 <!-- PROFILE_BANNER_END -->
 
 [![Profile Views](https://komarev.com/ghpvc/?username=taj54&color=7aa2f7&style=for-the-badge)](https://github.com/taj54)
@@ -132,8 +129,8 @@ Architecting an open-source ecosystem for synchronized, cue-driven interactive v
 <!-- STATS_CARDS_START -->
 <div align="center">
 
-<img src=".github/assets/github-stats-e3b660.svg" alt="Taj's GitHub Stats" width="48%" />
-<img src=".github/assets/top-langs-e3b660.svg" alt="Top Languages" width="48%" />
+<img src=".github/assets/github-stats-069fbd.svg" alt="Taj's GitHub Stats" width="48%" />
+<img src=".github/assets/top-langs-069fbd.svg" alt="Top Languages" width="48%" />
 
 </div>
 <!-- STATS_CARDS_END -->
@@ -163,7 +160,7 @@ Architecting an open-source ecosystem for synchronized, cue-driven interactive v
       <h3>💡 Random Dev Fact</h3>
       <!-- RANDOM_FACT_START -->
 <p align="center">
-  <img src=".github/assets/dev-trivia-01-dcce10.svg" alt="ARCHITECTURE: Built a Laravel MCP starter kit for tenant-aware apps." width="100%" />
+  <img src=".github/assets/dev-trivia-18-b19cba.svg" alt="AI AGENTS: I use CrewAI to teach old code new tricks." width="100%" />
 </p>
 <!-- RANDOM_FACT_END -->
     </td>
