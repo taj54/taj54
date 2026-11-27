@@ -2,7 +2,7 @@
 
 <!-- PROFILE_BANNER_START -->
 <p align="center">
-  <img src=".github/assets/profile-banner-71534390ccf6.svg" alt="TAJ - Full-Stack Product Engineer" width="100%">
+  <img src=".github/assets/profile-banner-2984a775088b.svg" alt="TAJ - Full-Stack Product Engineer" width="100%">
 </p>
 <!-- PROFILE_BANNER_END -->
 
@@ -13,18 +13,12 @@
 [![VS Code Marketplace](https://img.shields.io/badge/VS%20Code%20Marketplace-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://marketplace.visualstudio.com/publishers/taj154dev)
 </div>
 
----
 
-## 🚩 About Me
-
-I build software that feels effortless on the surface and stays rock-solid under load. From multi-tenant SaaS architectures to framework-agnostic open-source SDKs, I care deeply about clean boundaries, developer ergonomics, and shipping products that scale.
-
-- 🎯 **Core Focus:** Clean architecture, scalable multi-tenant systems, and high-craft user experiences
-- 🧠 **Engineering Mindset:** Lifelong builder exploring distributed systems, agentic AI workflows, and open-source tooling
-- 🤝 **Collaboration:** Open to technical partnerships, high-impact product engineering, and open-source quests
-
-> *"Clean architecture is about intent: your system should scream what it does."*  
-> — **Robert C. Martin (Uncle Bob)**
+<!-- ABOUT-ME:START -->
+<p align="center">
+  <img src=".github/assets/about-me-20261127-231848.svg" alt="TAJ - Full-Stack Product Engineer" width="100%">
+</p>
+<!-- ABOUT-ME:END -->
 
 ---
 
@@ -183,3 +177,9 @@ Architecting an open-source ecosystem for synchronized, cue-driven interactive v
 Connect with me on **[LinkedIn](https://www.linkedin.com/in/tajul-islam-j)**, explore my **[Portfolio](https://taj54.github.io)**, or send a carrier pigeon 🕊️
 
 </div>
+
+<!-- ABOUT-ME-SVG:START -->
+## About Me
+
+<img src="wdwqdqwd.svg" alt="About Me" width="100%" />
+<!-- ABOUT-ME-SVG:END -->
