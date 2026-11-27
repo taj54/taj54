@@ -101,3 +101,6 @@ console.log("README.md sections synced from .github/scripts/profile-data.json");
 
 const pythonCmd = process.platform === "win32" ? "python" : "python3";
 execFileSync(pythonCmd, [funfactScriptPath], { cwd: rootDir, stdio: "inherit" });
+
+const statsScriptPath = path.join(rootDir, ".github", "scripts", "update_stats.py");
+execFileSync(pythonCmd, [statsScriptPath], { cwd: rootDir, stdio: "inherit" });
