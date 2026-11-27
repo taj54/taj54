@@ -40,7 +40,6 @@ Architecting an open-source ecosystem for synchronized, cue-driven interactive v
 <!-- PROJECTS_START -->
 | Project | Description | Focus Areas |
 | :--- | :--- | :--- |
-| 🛠️ **GKAutomobiles** | End-to-end automotive service center & operations platform | Full-Stack Web, Workflow Automation |
 | 🧱 **Quicke B2B/B2C** | Scalable multi-tenant e-commerce architecture | Multi-Tenancy, API Design, High Availability |
 | 🧠 **Crew.ai Marketing** | Multi-agent AI pipeline for content research & generation | Python, Agentic AI Workflows |
 | 🖌️ **Visual Editor** | Drag-and-drop canvas builder for rapid UI prototyping | Interactive UI, Component Architecture |
@@ -155,7 +154,7 @@ Architecting an open-source ecosystem for synchronized, cue-driven interactive v
       <h3>💡 Random Dev Fact</h3>
       <!-- RANDOM_FACT_START -->
 <p align="center">
-  <img src=".github/assets/dev-trivia-15-f709fe.svg" alt="Dev Trivia Card" width="100%" />
+  <img src=".github/assets/dev-trivia-13-4a866e.svg" alt="Dev Trivia Card" width="100%" />
 </p>
 <!-- RANDOM_FACT_END -->
     </td>
