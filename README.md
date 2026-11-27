@@ -2,7 +2,7 @@
 
 <!-- PROFILE_BANNER_START -->
 <p align="center">
-  <img src=".github/assets/profile-banner-9e5bbafd13da.svg" alt="Tajul Islam — Full-Stack Product Engineer" width="100%">
+  <img src=".github/assets/profile-banner-f156378dc2af.svg" alt="TAJ - Full-Stack Product Engineer" width="100%">
 </p>
 <!-- PROFILE_BANNER_END -->
 
@@ -129,8 +129,8 @@ Architecting an open-source ecosystem for synchronized, cue-driven interactive v
 <!-- STATS_CARDS_START -->
 <div align="center">
 
-<img src=".github/assets/github-stats-72466c.svg" alt="Taj's GitHub Stats" width="48%" />
-<img src=".github/assets/top-langs-72466c.svg" alt="Top Languages" width="48%" />
+<img src=".github/assets/github-stats-31f734.svg" alt="Taj's GitHub Stats" width="48%" />
+<img src=".github/assets/top-langs-31f734.svg" alt="Top Languages" width="48%" />
 
 </div>
 <!-- STATS_CARDS_END -->
@@ -160,7 +160,7 @@ Architecting an open-source ecosystem for synchronized, cue-driven interactive v
       <h3>💡 Random Dev Fact</h3>
       <!-- RANDOM_FACT_START -->
 <p align="center">
-  <img src=".github/assets/dev-trivia-06-9eae4b.svg" alt="FLOW STATE: Dark mode and lofi = peak productivity." width="100%" />
+  <img src=".github/assets/dev-trivia-21-de790b.svg" alt="REFACTORING: I once fixed a bug by rewriting the whole module." width="100%" />
 </p>
 <!-- RANDOM_FACT_END -->
     </td>
