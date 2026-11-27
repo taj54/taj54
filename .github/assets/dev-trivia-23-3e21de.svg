@@ -6,12 +6,12 @@
       <stop offset="100%" stop-color="#0D1117"/>
     </linearGradient>
     <linearGradient id="accentGrad" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#14B8A6"/>
-      <stop offset="100%" stop-color="#2DD4BF"/>
+      <stop offset="0%" stop-color="#16A34A"/>
+      <stop offset="100%" stop-color="#4ADE80"/>
     </linearGradient>
     <radialGradient id="glowOrb" cx="0.88" cy="0.2" r="0.55">
-      <stop offset="0%" stop-color="#14B8A6" stop-opacity="0.22"/>
-      <stop offset="100%" stop-color="#14B8A6" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#16A34A" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#16A34A" stop-opacity="0"/>
     </radialGradient>
     <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1" fill="#FFFFFF" fill-opacity="0.04"/>
@@ -25,33 +25,33 @@
   <rect x="32" y="1" width="140" height="3" rx="1.5" fill="url(#accentGrad)"/>
 
   <g transform="translate(32, 24)">
-    <rect width="152" height="28" rx="14" fill="#1E293B" stroke="#14B8A6" stroke-opacity="0.5"/>
-    <circle cx="16" cy="14" r="4" fill="#14B8A6">
+    <rect width="152" height="28" rx="14" fill="#1E293B" stroke="#16A34A" stroke-opacity="0.5"/>
+    <circle cx="16" cy="14" r="4" fill="#16A34A">
       <animate attributeName="opacity" values="1;0.3;1" dur="2.4s" repeatCount="indefinite"/>
     </circle>
     <text x="28" y="18" fill="#F1F5F9" font-size="11" font-weight="700" letter-spacing="1.1"
-          font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">DEV TRIVIA #09</text>
+          font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">DEV TRIVIA #23</text>
   </g>
 
   <g transform="translate(194, 24)">
-    <rect width="148" height="28" rx="14" fill="#14B8A6" fill-opacity="0.14" stroke="#14B8A6" stroke-opacity="0.35"/>
-    <text x="74" y="18" text-anchor="middle" fill="#2DD4BF" font-size="11" font-weight="700" letter-spacing="1"
-          font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">BUILDER MINDSET</text>
+    <rect width="108" height="28" rx="14" fill="#16A34A" fill-opacity="0.14" stroke="#16A34A" stroke-opacity="0.35"/>
+    <text x="54" y="18" text-anchor="middle" fill="#4ADE80" font-size="11" font-weight="700" letter-spacing="1"
+          font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">PHILOSOPHY</text>
   </g>
 
   <g transform="translate(716, 22)">
     <rect width="52" height="52" rx="14" fill="#161F30" stroke="#334155" stroke-width="1"/>
-    <path d="M21 18l-7 8 7 8M31 18l7 8-7 8M28 15l-4 22" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M26 13l3 9 9 3-9 3-3 9-3-9-9-3 9-3 3-9z" fill="#4ADE80"/>
   </g>
 
-  <text x="32" y="102" fill="#F8FAFC" font-size="21" font-weight="600" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">&quot;I write tools I wish already existed.&quot;</text>
+  <text x="32" y="102" fill="#F8FAFC" font-size="21" font-weight="600" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">&quot;I like making tech feel fun, not scary.&quot;</text>
 
   <line x1="32" y1="154" x2="768" y2="154" stroke="#1E293B" stroke-width="1"/>
 
   <text x="32" y="176" fill="#94A3B8" font-size="11" font-weight="600"
-        font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">CYCLE 18/23</text>
+        font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">CYCLE 19/23</text>
   <rect x="118" y="168" width="220" height="7" rx="3.5" fill="#1E293B"/>
-  <rect x="118" y="168" width="172" height="7" rx="3.5" fill="url(#accentGrad)"/>
+  <rect x="118" y="168" width="181" height="7" rx="3.5" fill="url(#accentGrad)"/>
 
   <text x="768" y="176" text-anchor="end" fill="#64748B" font-size="11"
         font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">UPDATED NOV 27, 2026 • GITHUB ACTIONS</text>
