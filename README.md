@@ -129,8 +129,8 @@ Architecting an open-source ecosystem for synchronized, cue-driven interactive v
 <!-- STATS_CARDS_START -->
 <div align="center">
 
-<img src=".github/assets/github-stats-fae6f7.svg" alt="Taj's GitHub Stats" width="48%" />
-<img src=".github/assets/top-langs-fae6f7.svg" alt="Top Languages" width="48%" />
+<img src=".github/assets/github-stats-4c7744.svg" alt="Taj's GitHub Stats" width="48%" />
+<img src=".github/assets/top-langs-4c7744.svg" alt="Top Languages" width="48%" />
 
 </div>
 <!-- STATS_CARDS_END -->
@@ -160,7 +160,7 @@ Architecting an open-source ecosystem for synchronized, cue-driven interactive v
       <h3>💡 Random Dev Fact</h3>
       <!-- RANDOM_FACT_START -->
 <p align="center">
-  <img src=".github/assets/dev-trivia-23-3e21de.svg" alt="Dev Trivia Card" width="100%" />
+  <img src=".github/assets/dev-trivia-07-855065.svg" alt="WAR STORIES: I once broke production with a single missing comma." width="100%" />
 </p>
 <!-- RANDOM_FACT_END -->
     </td>
