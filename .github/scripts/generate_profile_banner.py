@@ -1,475 +1,214 @@
 
-#!/usr/bin/env python3
-"""
-Animated GitHub Profile Banner Generator
------------------------------------------
-Generates:
-    .github/assets/profile-banner.svg
-
-Updates:
-    README.md
-
-Run:
-    python scripts/generate_profile_banner.py
-"""
-
 from pathlib import Path
-from datetime import datetime, timezone
-import html
-import random
+from xml.sax.saxutils import escape
 import re
 
-# --------------------------------------------------
-# Configuration
-# --------------------------------------------------
-
-README_PATH = Path("README.md")
-SVG_PATH = Path(".github/assets/profile-banner.svg")
-
-START_MARKER = "<!-- PROFILE_BANNER_START -->"
-END_MARKER = "<!-- PROFILE_BANNER_END -->"
-
-WIDTH = 1000
-HEIGHT = 320
-
-PROFILE = {
-    "name": "Hi, I'm Taj!",
-    "title": "Late-Night Code Whisperer & Full-Stack Product Engineer",
-    "stack": "Laravel  •  React  •  TypeScript  •  Node.js  •  Python  ",
-    "subtitle": (
-        "Architecting scalable multi-tenant systems, "
-        "developer tools, and elegant apps since 2020."
-    ),
-}
-
-
-# --------------------------------------------------
-# SVG Particle Generator
-# --------------------------------------------------
-
-def generate_particles(count=40):
-    rng = random.Random()
-    particles = []
-
-    colors = [
-        "#38BDF8",
-        "#67E8F9",
-        "#A78BFA",
-        "#93C5FD",
-    ]
-
-    for _ in range(count):
-        x = rng.randint(20, WIDTH - 20)
-        y = rng.randint(20, HEIGHT - 20)
-
-        radius = rng.uniform(1, 2.5)
-        duration = rng.uniform(3, 8)
-        delay = rng.uniform(0, 5)
-
-        color = rng.choice(colors)
-
-        particles.append(f"""
-        <circle
-            cx="{x}"
-            cy="{y}"
-            r="{radius:.1f}"
-            fill="{color}"
-            opacity="0.4">
-
-            <animate
-                attributeName="opacity"
-                values="0.1;0.9;0.1"
-                dur="{duration:.1f}s"
-                begin="{delay:.1f}s"
-                repeatCount="indefinite"/>
-
-            <animateTransform
-                attributeName="transform"
-                type="translate"
-                values="0,0; 12,-15; 0,0"
-                dur="{duration:.1f}s"
-                begin="{delay:.1f}s"
-                repeatCount="indefinite"/>
-
-        </circle>
-        """)
-
-    return "\n".join(particles)
-
-
-# --------------------------------------------------
-# SVG Generator
-# --------------------------------------------------
-
-def generate_svg():
-
-    particles = generate_particles()
-
-    name = html.escape(PROFILE["name"])
-    title = html.escape(PROFILE["title"])
-    stack = html.escape(PROFILE["stack"])
-    subtitle = html.escape(PROFILE["subtitle"])
-
-    generated = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-
-    return f"""<?xml version="1.0" encoding="UTF-8"?>
-
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="{WIDTH}"
-    height="{HEIGHT}"
-    viewBox="0 0 {WIDTH} {HEIGHT}"
-    role="img"
-    aria-labelledby="banner-title">
-
-    <title id="banner-title">
-        {name} - Full-Stack Product Engineer
-    </title>
-
-    <defs>
-
-        <!-- Background -->
-        <linearGradient id="background"
-            x1="0" y1="0" x2="1" y2="1">
-
-            <stop offset="0%" stop-color="#080D1B"/>
-            <stop offset="50%" stop-color="#101A32"/>
-            <stop offset="100%" stop-color="#071421"/>
-
-        </linearGradient>
-
-        <!-- Accent Gradient -->
-        <linearGradient id="accent"
-            x1="0" y1="0" x2="1" y2="0">
-
-            <stop offset="0%" stop-color="#38BDF8"/>
-            <stop offset="50%" stop-color="#A78BFA"/>
-            <stop offset="100%" stop-color="#22D3EE"/>
-
-            <animate
-                attributeName="x1"
-                values="0;1;0"
-                dur="10s"
-                repeatCount="indefinite"/>
-
-        </linearGradient>
-
-        <!-- Wave Gradient -->
-        <linearGradient id="wave"
-            x1="0" y1="0" x2="1" y2="0">
-
-            <stop offset="0%"
-                stop-color="#0EA5E9"
-                stop-opacity="0.04"/>
-
-            <stop offset="50%"
-                stop-color="#8B5CF6"
-                stop-opacity="0.25"/>
-
-            <stop offset="100%"
-                stop-color="#22D3EE"
-                stop-opacity="0.08"/>
-
-        </linearGradient>
-
-        <!-- Blue Glow -->
-        <radialGradient id="blueGlow">
-            <stop offset="0%"
-                stop-color="#38BDF8"
-                stop-opacity="0.25"/>
-
-            <stop offset="100%"
-                stop-color="#38BDF8"
-                stop-opacity="0"/>
-        </radialGradient>
-
-        <!-- Violet Glow -->
-        <radialGradient id="violetGlow">
-            <stop offset="0%"
-                stop-color="#8B5CF6"
-                stop-opacity="0.25"/>
-
-            <stop offset="100%"
-                stop-color="#8B5CF6"
-                stop-opacity="0"/>
-        </radialGradient>
-
-        <!-- Grid -->
-        <pattern id="grid"
-            width="64"
-            height="64"
-            patternUnits="userSpaceOnUse">
-
-            <path
-                d="M64 0H0V64"
-                fill="none"
-                stroke="#94A3B8"
-                stroke-opacity="0.05"/>
-
-        </pattern>
-
-        <clipPath id="clip">
-            <rect
-                width="{WIDTH}"
-                height="{HEIGHT}"
-                rx="16"/>
-        </clipPath>
-
-    </defs>
-
-    <g clip-path="url(#clip)">
-
-        <!-- Main Background -->
-        <rect
-            width="{WIDTH}"
-            height="{HEIGHT}"
-            fill="url(#background)"/>
-
-        <rect
-            width="{WIDTH}"
-            height="{HEIGHT}"
-            fill="url(#grid)"/>
-
-        <!-- Moving Blue Glow -->
-        <circle
-            cx="180"
-            cy="100"
-            r="280"
-            fill="url(#blueGlow)">
-
-            <animate
-                attributeName="cx"
-                values="180;350;180"
-                dur="17s"
-                repeatCount="indefinite"/>
-
-            <animate
-                attributeName="cy"
-                values="100;150;100"
-                dur="13s"
-                repeatCount="indefinite"/>
-
-        </circle>
-
-        <!-- Moving Violet Glow -->
-        <circle
-            cx="850"
-            cy="260"
-            r="300"
-            fill="url(#violetGlow)">
-
-            <animate
-                attributeName="cx"
-                values="850;680;850"
-                dur="19s"
-                repeatCount="indefinite"/>
-
-        </circle>
-
-        <!-- Floating Particles -->
-        {particles}
-
-        <!-- Animated Wave -->
-        <path
-            d="M0 210
-               C170 155 300 255 500 205
-               S820 155 1000 220
-               L1000 320 L0 320 Z"
-            fill="url(#wave)">
-
-            <animate
-                attributeName="d"
-                values="
-                M0 210 C170 155 300 255 500 205 S820 155 1000 220 L1000 320 L0 320 Z;
-                M0 230 C170 280 300 165 500 230 S820 260 1000 195 L1000 320 L0 320 Z;
-                M0 210 C170 155 300 255 500 205 S820 155 1000 220 L1000 320 L0 320 Z"
-                dur="12s"
-                repeatCount="indefinite"/>
-
-        </path>
-
-        <!-- Wave Outline -->
-        <path
-            d="M0 235
-               C180 250 310 215 500 235
-               S820 210 1000 240"
-            fill="none"
-            stroke="url(#accent)"
-            stroke-opacity="0.4"
-            stroke-width="1.5">
-
-            <animate
-                attributeName="d"
-                values="
-                M0 235 C180 250 310 215 500 235 S820 210 1000 240;
-                M0 220 C180 205 310 250 500 220 S820 250 1000 220;
-                M0 235 C180 250 310 215 500 235 S820 210 1000 240"
-                dur="10s"
-                repeatCount="indefinite"/>
-
-        </path>
-
-        <!-- Profile Text -->
-        <g
-            text-anchor="middle"
-            font-family="Segoe UI, Arial, sans-serif">
-
-            <text
-                x="500"
-                y="105"
-                font-size="43"
-                font-weight="750"
-                fill="#F8FAFC">
-
-                {name}
-
-            </text>
-
-            <text
-                x="500"
-                y="151"
-                font-size="23"
-                font-weight="650"
-                fill="#D8E4F4">
-
-                {title}
-
-            </text>
-
-            <text
-                x="500"
-                y="197"
-                font-size="19"
-                font-weight="600"
-                fill="#67E8F9">
-
-                {stack}
-
-            </text>
-
-            <text
-                x="500"
-                y="278"
-                font-size="15"
-                fill="#AABBD1">
-
-                {subtitle}
-
-            </text>
-
-        </g>
-
-        <!-- Moving Accent Line -->
-        <rect
-            x="90"
-            y="25"
-            width="150"
-            height="3"
-            rx="2"
-            fill="url(#accent)">
-
-            <animateTransform
-                attributeName="transform"
-                type="translate"
-                values="0,0; 670,0; 0,0"
-                dur="8s"
-                repeatCount="indefinite"/>
-
-        </rect>
-
+ROOT = Path.cwd()
+ASSET_DIR = ROOT / ".github" / "assets"
+SVG_PATH = ASSET_DIR / "profile-banner.svg"
+README_PATH = ROOT / "README.md"
+
+ASSET_DIR.mkdir(parents=True, exist_ok=True)
+
+NAME = "TAJ"
+ROLE = "FULL-STACK PRODUCT ENGINEER"
+TAGLINE = "Building scalable systems, developer tools & elegant digital experiences."
+TECH = ["LARAVEL", "REACT", "TYPESCRIPT", "NODE.JS","PYTHON"]
+
+tech_pills = ""
+x = 64
+
+for item in TECH:
+    width = len(item) * 9 + 34
+    tech_pills += f"""
+    <g transform="translate({x}, 272)">
+      <rect width="{width}" height="32" rx="16"
+            fill="#111b35" stroke="#33466b" stroke-width="1"/>
+      <text x="{width / 2}" y="21" text-anchor="middle"
+            class="pill">{escape(item)}</text>
     </g>
+    """
+    x += width + 12
 
-    <!-- Border -->
-    <rect
-        x="1"
-        y="1"
-        width="{WIDTH - 2}"
-        height="{HEIGHT - 2}"
-        rx="16"
-        fill="none"
-        stroke="url(#accent)"
-        stroke-opacity="0.25"/>
+svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="1200" height="360" viewBox="0 0 1200 360"
+  role="img" aria-labelledby="title desc">
 
-    <!-- Generated: {generated} -->
+  <title id="title">{escape(NAME)} — {escape(ROLE)}</title>
+  <desc id="desc">{escape(TAGLINE)}</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070b18"/>
+      <stop offset="55%" stop-color="#11132d"/>
+      <stop offset="100%" stop-color="#071a2b"/>
+    </linearGradient>
+
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#2dd4bf"/>
+    </linearGradient>
+
+    <radialGradient id="glow">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity=".32"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none"
+            stroke="#8ba4d8" stroke-opacity=".09" stroke-width="1"/>
+    </pattern>
+
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="35"/>
+    </filter>
+
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      .name {{
+        font: 800 48px 'Segoe UI', Arial, sans-serif;
+        letter-spacing: 3px;
+        fill: #f8fafc;
+      }}
+      .role {{
+        font: 700 16px 'Segoe UI', Arial, sans-serif;
+        letter-spacing: 5px;
+        fill: #67e8f9;
+      }}
+      .tagline {{
+        font: 15px 'Segoe UI', Arial, sans-serif;
+        fill: #aab8d0;
+      }}
+      .pill {{
+        font: 700 10px 'Segoe UI', Arial, sans-serif;
+        letter-spacing: 1px;
+        fill: #dbeafe;
+      }}
+      .code {{
+        font: 13px monospace;
+        fill: #8da3c7;
+      }}
+      .particle {{
+        animation: float 6s ease-in-out infinite alternate;
+      }}
+      .orbit {{
+        transform-origin: 990px 180px;
+        animation: rotate 24s linear infinite;
+      }}
+      .pulse {{
+        animation: pulse 3s ease-in-out infinite;
+      }}
+      @keyframes float {{
+        from {{ transform: translateY(0); opacity: .35; }}
+        to {{ transform: translateY(-18px); opacity: .9; }}
+      }}
+      @keyframes rotate {{
+        to {{ transform: rotate(360deg); }}
+      }}
+      @keyframes pulse {{
+        0%, 100% {{ opacity: .35; }}
+        50% {{ opacity: 1; }}
+      }}
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="360" fill="url(#bg)"/>
+  <rect width="1200" height="360" fill="url(#grid)"/>
+
+  <!-- Ambient glow -->
+  <ellipse cx="950" cy="170" rx="300" ry="230"
+           fill="url(#glow)" filter="url(#blur)"/>
+  <ellipse cx="180" cy="340" rx="250" ry="100"
+           fill="#0891b2" opacity=".12" filter="url(#blur)"/>
+
+  <!-- Decorative right-side orbit -->
+  <g fill="none" stroke="url(#accent)" opacity=".55">
+    <circle cx="990" cy="180" r="105" stroke-width="1.2"
+            stroke-dasharray="5 10"/>
+    <circle cx="990" cy="180" r="145" stroke-width="1"
+            stroke-dasharray="2 12" class="orbit"/>
+    <ellipse cx="990" cy="180" rx="190" ry="75"
+             transform="rotate(-35 990 180)" stroke-width="1"/>
+  </g>
+
+  <g class="pulse" filter="url(#softGlow)">
+    <circle cx="990" cy="75" r="5" fill="#67e8f9"/>
+    <circle cx="1134" cy="180" r="4" fill="#a78bfa"/>
+    <circle cx="900" cy="270" r="5" fill="#2dd4bf"/>
+  </g>
+
+  <!-- Floating particles -->
+  <g fill="#a5f3fc">
+    <circle class="particle" cx="790" cy="70" r="2"/>
+    <circle class="particle" cx="850" cy="310" r="2"/>
+    <circle class="particle" cx="1080" cy="90" r="2"/>
+    <circle class="particle" cx="1150" cy="290" r="2"/>
+    <circle class="particle" cx="720" cy="210" r="1.5"/>
+    <circle class="particle" cx="1030" cy="320" r="1.5"/>
+  </g>
+
+  <!-- Main content -->
+  <g transform="translate(64 0)">
+    <text x="0" y="55" class="code">// HELLO, WORLD. I'M</text>
+
+    <text x="0" y="125" class="name">{escape(NAME)}</text>
+
+    <rect x="0" y="151" width="74" height="3"
+          rx="2" fill="url(#accent)" filter="url(#softGlow)"/>
+
+    <text x="0" y="194" class="role">{escape(ROLE)}</text>
+
+    <text x="0" y="230" class="tagline">
+      {escape(TAGLINE)}
+    </text>
+
+    {tech_pills}
+  </g>
+
+  <!-- Bottom animated accent -->
+  <rect x="0" y="354" width="1200" height="6" fill="#17233d"/>
+  <rect x="0" y="354" width="360" height="6"
+        fill="url(#accent)" filter="url(#softGlow)">
+    <animate attributeName="x"
+      values="-360;1200" dur="7s" repeatCount="indefinite"/>
+  </rect>
 
 </svg>
 """
 
+SVG_PATH.write_text(svg, encoding="utf-8")
 
-# --------------------------------------------------
-# README Updater
-# --------------------------------------------------
+# Update README banner section
+banner = (
+    "<!-- PROFILE_BANNER_START -->\n"
+    '<p align="center">\n'
+    '  <img src=".github/assets/profile-banner.svg" '
+    'alt="Tajul Islam — Full-Stack Product Engineer" width="100%">\n'
+    '</p>\n'
+    "<!-- PROFILE_BANNER_END -->"
+)
 
-def update_readme():
+if README_PATH.exists():
+    readme = README_PATH.read_text(encoding="utf-8")
 
-    if not README_PATH.exists():
-        raise FileNotFoundError(
-            f"README file not found: {README_PATH}"
-        )
+    pattern = r"<!-- PROFILE_BANNER_START -->.*?<!-- PROFILE_BANNER_END -->"
 
-    content = README_PATH.read_text(encoding="utf-8")
-
-    banner_block = f"""{START_MARKER}
-<div align="center">
-  <img
-    src=".github/assets/profile-banner.svg"
-    width="100%"
-    alt="Taj - Full-Stack Product Engineer"/>
-</div>
-{END_MARKER}"""
-
-    pattern = re.compile(
-        re.escape(START_MARKER)
-        + r".*?"
-        + re.escape(END_MARKER),
-        re.DOTALL
-    )
-
-    if pattern.search(content):
-
-        content = pattern.sub(
-            lambda _: banner_block,
-            content,
-            count=1
-        )
-
+    if re.search(pattern, readme, flags=re.DOTALL):
+        readme = re.sub(pattern, lambda _: banner, readme, count=1, flags=re.DOTALL)
     else:
+        readme = banner + "\n\n" + readme
 
-        content = banner_block + "\n\n" + content.lstrip()
+    README_PATH.write_text(readme, encoding="utf-8")
 
-    README_PATH.write_text(
-        content,
-        encoding="utf-8"
-    )
-
-
-# --------------------------------------------------
-# Main
-# --------------------------------------------------
-
-def main():
-
-    SVG_PATH.parent.mkdir(
-        parents=True,
-        exist_ok=True
-    )
-
-    svg = generate_svg()
-
-    SVG_PATH.write_text(
-        svg,
-        encoding="utf-8"
-    )
-
-    update_readme()
-
-    print("===================================")
-    print(" Animated Profile Banner Generated ")
-    print("===================================")
-    print(f"SVG:     {SVG_PATH}")
-    print(f"README:  {README_PATH}")
-    print("Status:  Success")
-
-
-if __name__ == "__main__":
-    main()
+print(f"Generated: {SVG_PATH.relative_to(ROOT)}")
+print("README banner updated successfully.")
