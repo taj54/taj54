@@ -35,7 +35,7 @@ HEIGHT = 320
 PROFILE = {
     "name": "Hi, I'm Taj!",
     "title": "Late-Night Code Whisperer & Full-Stack Product Engineer",
-    "stack": "Laravel  •  React  •  TypeScript  •  Node.js",
+    "stack": "Laravel  •  React  •  TypeScript  •  Node.js  •  Python  ",
     "subtitle": (
         "Architecting scalable multi-tenant systems, "
         "developer tools, and elegant apps since 2020."

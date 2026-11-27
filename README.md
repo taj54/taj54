@@ -9,6 +9,11 @@
 </div>
 <!-- PROFILE_BANNER_END -->
 
+[![Profile Views](https://komarev.com/ghpvc/?username=taj54&color=7aa2f7&style=for-the-badge)](https://github.com/taj54)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tajul-islam-j)
+[![GitHub](https://img.shields.io/badge/GitHub-1a1b27?style=for-the-badge&logo=github&logoColor=7aa2f7)](https://github.com/taj54)
+[![Portfolio](https://img.shields.io/badge/Portfolio-24283b?style=for-the-badge&logo=googlechrome&logoColor=bb9af7)](https://taj54.github.io)
+[![VS Code Marketplace](https://img.shields.io/badge/VS%20Code%20Marketplace-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://marketplace.visualstudio.com/publishers/taj154dev)
 </div>
 
 ---
