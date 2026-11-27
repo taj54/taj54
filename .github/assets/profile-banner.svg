@@ -155,58 +155,58 @@
         <!-- Floating Particles -->
         
         <circle
-            cx="317"
-            cy="134"
-            r="2.3"
-            fill="#67E8F9"
-            opacity="0.4">
-
-            <animate
-                attributeName="opacity"
-                values="0.1;0.9;0.1"
-                dur="6.0s"
-                begin="0.5s"
-                repeatCount="indefinite"/>
-
-            <animateTransform
-                attributeName="transform"
-                type="translate"
-                values="0,0; 12,-15; 0,0"
-                dur="6.0s"
-                begin="0.5s"
-                repeatCount="indefinite"/>
-
-        </circle>
-        
-
-        <circle
-            cx="494"
-            cy="97"
-            r="2.5"
+            cx="427"
+            cy="49"
+            r="2.1"
             fill="#A78BFA"
             opacity="0.4">
 
             <animate
                 attributeName="opacity"
                 values="0.1;0.9;0.1"
-                dur="5.7s"
-                begin="1.9s"
+                dur="3.9s"
+                begin="0.7s"
                 repeatCount="indefinite"/>
 
             <animateTransform
                 attributeName="transform"
                 type="translate"
                 values="0,0; 12,-15; 0,0"
-                dur="5.7s"
-                begin="1.9s"
+                dur="3.9s"
+                begin="0.7s"
                 repeatCount="indefinite"/>
 
         </circle>
         
 
         <circle
-            cx="480"
-            cy="275"
+            cx="438"
+            cy="125"
+            r="2.1"
+            fill="#38BDF8"
+            opacity="0.4">
+
+            <animate
+                attributeName="opacity"
+                values="0.1;0.9;0.1"
+                dur="4.2s"
+                begin="3.1s"
+                repeatCount="indefinite"/>
+
+            <animateTransform
+                attributeName="transform"
+                type="translate"
+                values="0,0; 12,-15; 0,0"
+                dur="4.2s"
+                begin="3.1s"
+                repeatCount="indefinite"/>
+
+        </circle>
+        
+
+        <circle
+            cx="476"
+            cy="45"
             r="2.4"
             fill="#A78BFA"
             opacity="0.4">
@@ -214,82 +214,32 @@
             <animate
                 attributeName="opacity"
                 values="0.1;0.9;0.1"
-                dur="7.5s"
-                begin="0.6s"
+                dur="7.3s"
+                begin="1.3s"
                 repeatCount="indefinite"/>
 
             <animateTransform
                 attributeName="transform"
                 type="translate"
                 values="0,0; 12,-15; 0,0"
-                dur="7.5s"
-                begin="0.6s"
+                dur="7.3s"
+                begin="1.3s"
                 repeatCount="indefinite"/>
 
         </circle>
         
 
         <circle
-            cx="767"
-            cy="98"
-            r="1.8"
-            fill="#A78BFA"
-            opacity="0.4">
-
-            <animate
-                attributeName="opacity"
-                values="0.1;0.9;0.1"
-                dur="5.5s"
-                begin="2.9s"
-                repeatCount="indefinite"/>
-
-            <animateTransform
-                attributeName="transform"
-                type="translate"
-                values="0,0; 12,-15; 0,0"
-                dur="5.5s"
-                begin="2.9s"
-                repeatCount="indefinite"/>
-
-        </circle>
-        
-
-        <circle
-            cx="879"
-            cy="274"
-            r="1.6"
-            fill="#67E8F9"
-            opacity="0.4">
-
-            <animate
-                attributeName="opacity"
-                values="0.1;0.9;0.1"
-                dur="4.3s"
-                begin="3.5s"
-                repeatCount="indefinite"/>
-
-            <animateTransform
-                attributeName="transform"
-                type="translate"
-                values="0,0; 12,-15; 0,0"
-                dur="4.3s"
-                begin="3.5s"
-                repeatCount="indefinite"/>
-
-        </circle>
-        
-
-        <circle
-            cx="500"
-            cy="266"
-            r="2.3"
+            cx="866"
+            cy="65"
+            r="2.2"
             fill="#93C5FD"
             opacity="0.4">
 
             <animate
                 attributeName="opacity"
                 values="0.1;0.9;0.1"
-                dur="5.4s"
+                dur="7.8s"
                 begin="3.0s"
                 repeatCount="indefinite"/>
 
@@ -297,7 +247,7 @@
                 attributeName="transform"
                 type="translate"
                 values="0,0; 12,-15; 0,0"
-                dur="5.4s"
+                dur="7.8s"
                 begin="3.0s"
                 repeatCount="indefinite"/>
 
@@ -305,33 +255,58 @@
         
 
         <circle
-            cx="605"
-            cy="146"
-            r="2.2"
+            cx="169"
+            cy="58"
+            r="1.7"
+            fill="#38BDF8"
+            opacity="0.4">
+
+            <animate
+                attributeName="opacity"
+                values="0.1;0.9;0.1"
+                dur="5.5s"
+                begin="1.0s"
+                repeatCount="indefinite"/>
+
+            <animateTransform
+                attributeName="transform"
+                type="translate"
+                values="0,0; 12,-15; 0,0"
+                dur="5.5s"
+                begin="1.0s"
+                repeatCount="indefinite"/>
+
+        </circle>
+        
+
+        <circle
+            cx="212"
+            cy="196"
+            r="2.3"
             fill="#A78BFA"
             opacity="0.4">
 
             <animate
                 attributeName="opacity"
                 values="0.1;0.9;0.1"
-                dur="5.1s"
-                begin="2.0s"
+                dur="3.7s"
+                begin="1.6s"
                 repeatCount="indefinite"/>
 
             <animateTransform
                 attributeName="transform"
                 type="translate"
                 values="0,0; 12,-15; 0,0"
-                dur="5.1s"
-                begin="2.0s"
+                dur="3.7s"
+                begin="1.6s"
                 repeatCount="indefinite"/>
 
         </circle>
         
 
         <circle
-            cx="950"
-            cy="114"
+            cx="293"
+            cy="215"
             r="1.9"
             fill="#93C5FD"
             opacity="0.4">
@@ -339,24 +314,49 @@
             <animate
                 attributeName="opacity"
                 values="0.1;0.9;0.1"
-                dur="7.9s"
-                begin="2.3s"
+                dur="3.3s"
+                begin="0.4s"
                 repeatCount="indefinite"/>
 
             <animateTransform
                 attributeName="transform"
                 type="translate"
                 values="0,0; 12,-15; 0,0"
-                dur="7.9s"
-                begin="2.3s"
+                dur="3.3s"
+                begin="0.4s"
                 repeatCount="indefinite"/>
 
         </circle>
         
 
         <circle
-            cx="655"
-            cy="196"
+            cx="94"
+            cy="69"
+            r="1.7"
+            fill="#67E8F9"
+            opacity="0.4">
+
+            <animate
+                attributeName="opacity"
+                values="0.1;0.9;0.1"
+                dur="4.8s"
+                begin="2.7s"
+                repeatCount="indefinite"/>
+
+            <animateTransform
+                attributeName="transform"
+                type="translate"
+                values="0,0; 12,-15; 0,0"
+                dur="4.8s"
+                begin="2.7s"
+                repeatCount="indefinite"/>
+
+        </circle>
+        
+
+        <circle
+            cx="266"
+            cy="21"
             r="2.0"
             fill="#38BDF8"
             opacity="0.4">
@@ -364,24 +364,174 @@
             <animate
                 attributeName="opacity"
                 values="0.1;0.9;0.1"
-                dur="4.9s"
-                begin="3.1s"
+                dur="3.3s"
+                begin="0.5s"
                 repeatCount="indefinite"/>
 
             <animateTransform
                 attributeName="transform"
                 type="translate"
                 values="0,0; 12,-15; 0,0"
-                dur="4.9s"
-                begin="3.1s"
+                dur="3.3s"
+                begin="0.5s"
                 repeatCount="indefinite"/>
 
         </circle>
         
 
         <circle
-            cx="534"
-            cy="151"
+            cx="395"
+            cy="242"
+            r="2.2"
+            fill="#38BDF8"
+            opacity="0.4">
+
+            <animate
+                attributeName="opacity"
+                values="0.1;0.9;0.1"
+                dur="5.6s"
+                begin="2.9s"
+                repeatCount="indefinite"/>
+
+            <animateTransform
+                attributeName="transform"
+                type="translate"
+                values="0,0; 12,-15; 0,0"
+                dur="5.6s"
+                begin="2.9s"
+                repeatCount="indefinite"/>
+
+        </circle>
+        
+
+        <circle
+            cx="659"
+            cy="62"
+            r="1.5"
+            fill="#67E8F9"
+            opacity="0.4">
+
+            <animate
+                attributeName="opacity"
+                values="0.1;0.9;0.1"
+                dur="7.4s"
+                begin="3.4s"
+                repeatCount="indefinite"/>
+
+            <animateTransform
+                attributeName="transform"
+                type="translate"
+                values="0,0; 12,-15; 0,0"
+                dur="7.4s"
+                begin="3.4s"
+                repeatCount="indefinite"/>
+
+        </circle>
+        
+
+        <circle
+            cx="856"
+            cy="277"
+            r="1.7"
+            fill="#38BDF8"
+            opacity="0.4">
+
+            <animate
+                attributeName="opacity"
+                values="0.1;0.9;0.1"
+                dur="4.5s"
+                begin="2.4s"
+                repeatCount="indefinite"/>
+
+            <animateTransform
+                attributeName="transform"
+                type="translate"
+                values="0,0; 12,-15; 0,0"
+                dur="4.5s"
+                begin="2.4s"
+                repeatCount="indefinite"/>
+
+        </circle>
+        
+
+        <circle
+            cx="208"
+            cy="180"
+            r="1.5"
+            fill="#38BDF8"
+            opacity="0.4">
+
+            <animate
+                attributeName="opacity"
+                values="0.1;0.9;0.1"
+                dur="7.1s"
+                begin="1.6s"
+                repeatCount="indefinite"/>
+
+            <animateTransform
+                attributeName="transform"
+                type="translate"
+                values="0,0; 12,-15; 0,0"
+                dur="7.1s"
+                begin="1.6s"
+                repeatCount="indefinite"/>
+
+        </circle>
+        
+
+        <circle
+            cx="341"
+            cy="112"
+            r="1.5"
+            fill="#67E8F9"
+            opacity="0.4">
+
+            <animate
+                attributeName="opacity"
+                values="0.1;0.9;0.1"
+                dur="6.3s"
+                begin="1.1s"
+                repeatCount="indefinite"/>
+
+            <animateTransform
+                attributeName="transform"
+                type="translate"
+                values="0,0; 12,-15; 0,0"
+                dur="6.3s"
+                begin="1.1s"
+                repeatCount="indefinite"/>
+
+        </circle>
+        
+
+        <circle
+            cx="201"
+            cy="298"
+            r="1.8"
+            fill="#38BDF8"
+            opacity="0.4">
+
+            <animate
+                attributeName="opacity"
+                values="0.1;0.9;0.1"
+                dur="3.9s"
+                begin="2.2s"
+                repeatCount="indefinite"/>
+
+            <animateTransform
+                attributeName="transform"
+                type="translate"
+                values="0,0; 12,-15; 0,0"
+                dur="3.9s"
+                begin="2.2s"
+                repeatCount="indefinite"/>
+
+        </circle>
+        
+
+        <circle
+            cx="849"
+            cy="188"
             r="1.5"
             fill="#93C5FD"
             opacity="0.4">
@@ -389,291 +539,16 @@
             <animate
                 attributeName="opacity"
                 values="0.1;0.9;0.1"
-                dur="6.6s"
-                begin="1.1s"
+                dur="3.2s"
+                begin="1.0s"
                 repeatCount="indefinite"/>
 
             <animateTransform
                 attributeName="transform"
                 type="translate"
                 values="0,0; 12,-15; 0,0"
-                dur="6.6s"
-                begin="1.1s"
-                repeatCount="indefinite"/>
-
-        </circle>
-        
-
-        <circle
-            cx="317"
-            cy="95"
-            r="1.3"
-            fill="#93C5FD"
-            opacity="0.4">
-
-            <animate
-                attributeName="opacity"
-                values="0.1;0.9;0.1"
-                dur="7.7s"
-                begin="2.0s"
-                repeatCount="indefinite"/>
-
-            <animateTransform
-                attributeName="transform"
-                type="translate"
-                values="0,0; 12,-15; 0,0"
-                dur="7.7s"
-                begin="2.0s"
-                repeatCount="indefinite"/>
-
-        </circle>
-        
-
-        <circle
-            cx="778"
-            cy="54"
-            r="1.7"
-            fill="#93C5FD"
-            opacity="0.4">
-
-            <animate
-                attributeName="opacity"
-                values="0.1;0.9;0.1"
-                dur="5.2s"
-                begin="4.8s"
-                repeatCount="indefinite"/>
-
-            <animateTransform
-                attributeName="transform"
-                type="translate"
-                values="0,0; 12,-15; 0,0"
-                dur="5.2s"
-                begin="4.8s"
-                repeatCount="indefinite"/>
-
-        </circle>
-        
-
-        <circle
-            cx="802"
-            cy="272"
-            r="2.0"
-            fill="#38BDF8"
-            opacity="0.4">
-
-            <animate
-                attributeName="opacity"
-                values="0.1;0.9;0.1"
-                dur="4.2s"
-                begin="5.0s"
-                repeatCount="indefinite"/>
-
-            <animateTransform
-                attributeName="transform"
-                type="translate"
-                values="0,0; 12,-15; 0,0"
-                dur="4.2s"
-                begin="5.0s"
-                repeatCount="indefinite"/>
-
-        </circle>
-        
-
-        <circle
-            cx="262"
-            cy="146"
-            r="1.3"
-            fill="#A78BFA"
-            opacity="0.4">
-
-            <animate
-                attributeName="opacity"
-                values="0.1;0.9;0.1"
-                dur="5.2s"
-                begin="4.9s"
-                repeatCount="indefinite"/>
-
-            <animateTransform
-                attributeName="transform"
-                type="translate"
-                values="0,0; 12,-15; 0,0"
-                dur="5.2s"
-                begin="4.9s"
-                repeatCount="indefinite"/>
-
-        </circle>
-        
-
-        <circle
-            cx="295"
-            cy="103"
-            r="1.1"
-            fill="#A78BFA"
-            opacity="0.4">
-
-            <animate
-                attributeName="opacity"
-                values="0.1;0.9;0.1"
-                dur="5.8s"
-                begin="3.1s"
-                repeatCount="indefinite"/>
-
-            <animateTransform
-                attributeName="transform"
-                type="translate"
-                values="0,0; 12,-15; 0,0"
-                dur="5.8s"
-                begin="3.1s"
-                repeatCount="indefinite"/>
-
-        </circle>
-        
-
-        <circle
-            cx="499"
-            cy="246"
-            r="1.7"
-            fill="#38BDF8"
-            opacity="0.4">
-
-            <animate
-                attributeName="opacity"
-                values="0.1;0.9;0.1"
-                dur="5.4s"
-                begin="1.4s"
-                repeatCount="indefinite"/>
-
-            <animateTransform
-                attributeName="transform"
-                type="translate"
-                values="0,0; 12,-15; 0,0"
-                dur="5.4s"
-                begin="1.4s"
-                repeatCount="indefinite"/>
-
-        </circle>
-        
-
-        <circle
-            cx="937"
-            cy="64"
-            r="1.2"
-            fill="#A78BFA"
-            opacity="0.4">
-
-            <animate
-                attributeName="opacity"
-                values="0.1;0.9;0.1"
-                dur="7.4s"
-                begin="2.6s"
-                repeatCount="indefinite"/>
-
-            <animateTransform
-                attributeName="transform"
-                type="translate"
-                values="0,0; 12,-15; 0,0"
-                dur="7.4s"
-                begin="2.6s"
-                repeatCount="indefinite"/>
-
-        </circle>
-        
-
-        <circle
-            cx="531"
-            cy="155"
-            r="1.6"
-            fill="#93C5FD"
-            opacity="0.4">
-
-            <animate
-                attributeName="opacity"
-                values="0.1;0.9;0.1"
-                dur="6.3s"
-                begin="2.4s"
-                repeatCount="indefinite"/>
-
-            <animateTransform
-                attributeName="transform"
-                type="translate"
-                values="0,0; 12,-15; 0,0"
-                dur="6.3s"
-                begin="2.4s"
-                repeatCount="indefinite"/>
-
-        </circle>
-        
-
-        <circle
-            cx="479"
-            cy="265"
-            r="1.9"
-            fill="#A78BFA"
-            opacity="0.4">
-
-            <animate
-                attributeName="opacity"
-                values="0.1;0.9;0.1"
-                dur="4.8s"
-                begin="4.4s"
-                repeatCount="indefinite"/>
-
-            <animateTransform
-                attributeName="transform"
-                type="translate"
-                values="0,0; 12,-15; 0,0"
-                dur="4.8s"
-                begin="4.4s"
-                repeatCount="indefinite"/>
-
-        </circle>
-        
-
-        <circle
-            cx="132"
-            cy="27"
-            r="1.9"
-            fill="#67E8F9"
-            opacity="0.4">
-
-            <animate
-                attributeName="opacity"
-                values="0.1;0.9;0.1"
-                dur="3.8s"
-                begin="1.6s"
-                repeatCount="indefinite"/>
-
-            <animateTransform
-                attributeName="transform"
-                type="translate"
-                values="0,0; 12,-15; 0,0"
-                dur="3.8s"
-                begin="1.6s"
-                repeatCount="indefinite"/>
-
-        </circle>
-        
-
-        <circle
-            cx="326"
-            cy="87"
-            r="1.7"
-            fill="#A78BFA"
-            opacity="0.4">
-
-            <animate
-                attributeName="opacity"
-                values="0.1;0.9;0.1"
-                dur="3.7s"
-                begin="0.6s"
-                repeatCount="indefinite"/>
-
-            <animateTransform
-                attributeName="transform"
-                type="translate"
-                values="0,0; 12,-15; 0,0"
-                dur="3.7s"
-                begin="0.6s"
+                dur="3.2s"
+                begin="1.0s"
                 repeatCount="indefinite"/>
 
         </circle>
@@ -681,57 +556,82 @@
 
         <circle
             cx="570"
-            cy="108"
-            r="1.2"
-            fill="#A78BFA"
+            cy="259"
+            r="2.4"
+            fill="#38BDF8"
             opacity="0.4">
 
             <animate
                 attributeName="opacity"
                 values="0.1;0.9;0.1"
-                dur="6.6s"
-                begin="3.4s"
+                dur="7.9s"
+                begin="3.0s"
                 repeatCount="indefinite"/>
 
             <animateTransform
                 attributeName="transform"
                 type="translate"
                 values="0,0; 12,-15; 0,0"
-                dur="6.6s"
-                begin="3.4s"
+                dur="7.9s"
+                begin="3.0s"
                 repeatCount="indefinite"/>
 
         </circle>
         
 
         <circle
-            cx="306"
-            cy="36"
-            r="1.2"
+            cx="576"
+            cy="198"
+            r="2.2"
+            fill="#93C5FD"
+            opacity="0.4">
+
+            <animate
+                attributeName="opacity"
+                values="0.1;0.9;0.1"
+                dur="5.7s"
+                begin="4.1s"
+                repeatCount="indefinite"/>
+
+            <animateTransform
+                attributeName="transform"
+                type="translate"
+                values="0,0; 12,-15; 0,0"
+                dur="5.7s"
+                begin="4.1s"
+                repeatCount="indefinite"/>
+
+        </circle>
+        
+
+        <circle
+            cx="108"
+            cy="129"
+            r="1.5"
             fill="#67E8F9"
             opacity="0.4">
 
             <animate
                 attributeName="opacity"
                 values="0.1;0.9;0.1"
-                dur="3.6s"
-                begin="1.2s"
+                dur="7.1s"
+                begin="0.3s"
                 repeatCount="indefinite"/>
 
             <animateTransform
                 attributeName="transform"
                 type="translate"
                 values="0,0; 12,-15; 0,0"
-                dur="3.6s"
-                begin="1.2s"
+                dur="7.1s"
+                begin="0.3s"
                 repeatCount="indefinite"/>
 
         </circle>
         
 
         <circle
-            cx="975"
-            cy="190"
+            cx="916"
+            cy="37"
             r="2.1"
             fill="#A78BFA"
             opacity="0.4">
@@ -739,49 +639,49 @@
             <animate
                 attributeName="opacity"
                 values="0.1;0.9;0.1"
-                dur="4.4s"
-                begin="1.0s"
+                dur="6.7s"
+                begin="0.3s"
                 repeatCount="indefinite"/>
 
             <animateTransform
                 attributeName="transform"
                 type="translate"
                 values="0,0; 12,-15; 0,0"
-                dur="4.4s"
-                begin="1.0s"
+                dur="6.7s"
+                begin="0.3s"
                 repeatCount="indefinite"/>
 
         </circle>
         
 
         <circle
-            cx="692"
-            cy="49"
-            r="1.6"
-            fill="#93C5FD"
+            cx="390"
+            cy="131"
+            r="2.3"
+            fill="#67E8F9"
             opacity="0.4">
 
             <animate
                 attributeName="opacity"
                 values="0.1;0.9;0.1"
-                dur="7.4s"
-                begin="2.5s"
+                dur="4.3s"
+                begin="4.8s"
                 repeatCount="indefinite"/>
 
             <animateTransform
                 attributeName="transform"
                 type="translate"
                 values="0,0; 12,-15; 0,0"
-                dur="7.4s"
-                begin="2.5s"
+                dur="4.3s"
+                begin="4.8s"
                 repeatCount="indefinite"/>
 
         </circle>
         
 
         <circle
-            cx="846"
-            cy="76"
+            cx="222"
+            cy="44"
             r="2.0"
             fill="#A78BFA"
             opacity="0.4">
@@ -789,116 +689,216 @@
             <animate
                 attributeName="opacity"
                 values="0.1;0.9;0.1"
-                dur="3.6s"
-                begin="0.7s"
+                dur="6.6s"
+                begin="4.3s"
                 repeatCount="indefinite"/>
 
             <animateTransform
                 attributeName="transform"
                 type="translate"
                 values="0,0; 12,-15; 0,0"
-                dur="3.6s"
-                begin="0.7s"
+                dur="6.6s"
+                begin="4.3s"
                 repeatCount="indefinite"/>
 
         </circle>
         
 
         <circle
-            cx="706"
-            cy="28"
-            r="2.1"
+            cx="210"
+            cy="223"
+            r="1.9"
             fill="#67E8F9"
             opacity="0.4">
 
             <animate
                 attributeName="opacity"
                 values="0.1;0.9;0.1"
-                dur="4.1s"
-                begin="2.8s"
+                dur="7.8s"
+                begin="2.9s"
                 repeatCount="indefinite"/>
 
             <animateTransform
                 attributeName="transform"
                 type="translate"
                 values="0,0; 12,-15; 0,0"
-                dur="4.1s"
-                begin="2.8s"
+                dur="7.8s"
+                begin="2.9s"
                 repeatCount="indefinite"/>
 
         </circle>
         
 
         <circle
-            cx="905"
-            cy="55"
-            r="2.3"
+            cx="693"
+            cy="194"
+            r="1.3"
             fill="#A78BFA"
             opacity="0.4">
 
             <animate
                 attributeName="opacity"
                 values="0.1;0.9;0.1"
-                dur="3.6s"
-                begin="1.0s"
+                dur="3.9s"
+                begin="1.9s"
                 repeatCount="indefinite"/>
 
             <animateTransform
                 attributeName="transform"
                 type="translate"
                 values="0,0; 12,-15; 0,0"
-                dur="3.6s"
-                begin="1.0s"
+                dur="3.9s"
+                begin="1.9s"
                 repeatCount="indefinite"/>
 
         </circle>
         
 
         <circle
-            cx="844"
-            cy="269"
-            r="2.2"
-            fill="#38BDF8"
+            cx="763"
+            cy="53"
+            r="1.5"
+            fill="#93C5FD"
             opacity="0.4">
 
             <animate
                 attributeName="opacity"
                 values="0.1;0.9;0.1"
-                dur="3.5s"
-                begin="3.8s"
+                dur="4.8s"
+                begin="0.3s"
                 repeatCount="indefinite"/>
 
             <animateTransform
                 attributeName="transform"
                 type="translate"
                 values="0,0; 12,-15; 0,0"
-                dur="3.5s"
-                begin="3.8s"
+                dur="4.8s"
+                begin="0.3s"
                 repeatCount="indefinite"/>
 
         </circle>
         
 
         <circle
-            cx="761"
-            cy="155"
-            r="1.1"
+            cx="625"
+            cy="203"
+            r="2.5"
             fill="#67E8F9"
             opacity="0.4">
 
             <animate
                 attributeName="opacity"
                 values="0.1;0.9;0.1"
-                dur="5.2s"
-                begin="3.9s"
+                dur="6.4s"
+                begin="0.6s"
                 repeatCount="indefinite"/>
 
             <animateTransform
                 attributeName="transform"
                 type="translate"
                 values="0,0; 12,-15; 0,0"
-                dur="5.2s"
-                begin="3.9s"
+                dur="6.4s"
+                begin="0.6s"
+                repeatCount="indefinite"/>
+
+        </circle>
+        
+
+        <circle
+            cx="656"
+            cy="20"
+            r="2.0"
+            fill="#38BDF8"
+            opacity="0.4">
+
+            <animate
+                attributeName="opacity"
+                values="0.1;0.9;0.1"
+                dur="5.0s"
+                begin="2.9s"
+                repeatCount="indefinite"/>
+
+            <animateTransform
+                attributeName="transform"
+                type="translate"
+                values="0,0; 12,-15; 0,0"
+                dur="5.0s"
+                begin="2.9s"
+                repeatCount="indefinite"/>
+
+        </circle>
+        
+
+        <circle
+            cx="775"
+            cy="234"
+            r="1.6"
+            fill="#67E8F9"
+            opacity="0.4">
+
+            <animate
+                attributeName="opacity"
+                values="0.1;0.9;0.1"
+                dur="7.6s"
+                begin="0.7s"
+                repeatCount="indefinite"/>
+
+            <animateTransform
+                attributeName="transform"
+                type="translate"
+                values="0,0; 12,-15; 0,0"
+                dur="7.6s"
+                begin="0.7s"
+                repeatCount="indefinite"/>
+
+        </circle>
+        
+
+        <circle
+            cx="320"
+            cy="27"
+            r="1.2"
+            fill="#93C5FD"
+            opacity="0.4">
+
+            <animate
+                attributeName="opacity"
+                values="0.1;0.9;0.1"
+                dur="3.0s"
+                begin="3.2s"
+                repeatCount="indefinite"/>
+
+            <animateTransform
+                attributeName="transform"
+                type="translate"
+                values="0,0; 12,-15; 0,0"
+                dur="3.0s"
+                begin="3.2s"
+                repeatCount="indefinite"/>
+
+        </circle>
+        
+
+        <circle
+            cx="595"
+            cy="147"
+            r="1.8"
+            fill="#67E8F9"
+            opacity="0.4">
+
+            <animate
+                attributeName="opacity"
+                values="0.1;0.9;0.1"
+                dur="4.8s"
+                begin="4.9s"
+                repeatCount="indefinite"/>
+
+            <animateTransform
+                attributeName="transform"
+                type="translate"
+                values="0,0; 12,-15; 0,0"
+                dur="4.8s"
+                begin="4.9s"
                 repeatCount="indefinite"/>
 
         </circle>
@@ -906,165 +906,65 @@
 
         <circle
             cx="112"
-            cy="108"
-            r="2.4"
-            fill="#93C5FD"
-            opacity="0.4">
-
-            <animate
-                attributeName="opacity"
-                values="0.1;0.9;0.1"
-                dur="3.2s"
-                begin="2.3s"
-                repeatCount="indefinite"/>
-
-            <animateTransform
-                attributeName="transform"
-                type="translate"
-                values="0,0; 12,-15; 0,0"
-                dur="3.2s"
-                begin="2.3s"
-                repeatCount="indefinite"/>
-
-        </circle>
-        
-
-        <circle
-            cx="99"
-            cy="270"
-            r="1.1"
+            cy="206"
+            r="1.4"
             fill="#38BDF8"
             opacity="0.4">
 
             <animate
                 attributeName="opacity"
                 values="0.1;0.9;0.1"
-                dur="6.4s"
-                begin="2.9s"
+                dur="4.1s"
+                begin="4.2s"
                 repeatCount="indefinite"/>
 
             <animateTransform
                 attributeName="transform"
                 type="translate"
                 values="0,0; 12,-15; 0,0"
-                dur="6.4s"
-                begin="2.9s"
+                dur="4.1s"
+                begin="4.2s"
                 repeatCount="indefinite"/>
 
         </circle>
         
 
         <circle
-            cx="329"
-            cy="88"
-            r="1.7"
-            fill="#93C5FD"
-            opacity="0.4">
-
-            <animate
-                attributeName="opacity"
-                values="0.1;0.9;0.1"
-                dur="4.5s"
-                begin="2.3s"
-                repeatCount="indefinite"/>
-
-            <animateTransform
-                attributeName="transform"
-                type="translate"
-                values="0,0; 12,-15; 0,0"
-                dur="4.5s"
-                begin="2.3s"
-                repeatCount="indefinite"/>
-
-        </circle>
-        
-
-        <circle
-            cx="663"
-            cy="272"
-            r="2.2"
-            fill="#93C5FD"
-            opacity="0.4">
-
-            <animate
-                attributeName="opacity"
-                values="0.1;0.9;0.1"
-                dur="6.9s"
-                begin="1.8s"
-                repeatCount="indefinite"/>
-
-            <animateTransform
-                attributeName="transform"
-                type="translate"
-                values="0,0; 12,-15; 0,0"
-                dur="6.9s"
-                begin="1.8s"
-                repeatCount="indefinite"/>
-
-        </circle>
-        
-
-        <circle
-            cx="605"
-            cy="50"
-            r="2.2"
+            cx="72"
+            cy="209"
+            r="1.5"
             fill="#A78BFA"
             opacity="0.4">
 
             <animate
                 attributeName="opacity"
                 values="0.1;0.9;0.1"
-                dur="4.3s"
-                begin="1.8s"
+                dur="4.8s"
+                begin="1.2s"
                 repeatCount="indefinite"/>
 
             <animateTransform
                 attributeName="transform"
                 type="translate"
                 values="0,0; 12,-15; 0,0"
-                dur="4.3s"
-                begin="1.8s"
+                dur="4.8s"
+                begin="1.2s"
                 repeatCount="indefinite"/>
 
         </circle>
         
 
         <circle
-            cx="329"
-            cy="228"
-            r="1.7"
-            fill="#A78BFA"
+            cx="469"
+            cy="145"
+            r="2.0"
+            fill="#93C5FD"
             opacity="0.4">
 
             <animate
                 attributeName="opacity"
                 values="0.1;0.9;0.1"
-                dur="4.9s"
-                begin="3.6s"
-                repeatCount="indefinite"/>
-
-            <animateTransform
-                attributeName="transform"
-                type="translate"
-                values="0,0; 12,-15; 0,0"
-                dur="4.9s"
-                begin="3.6s"
-                repeatCount="indefinite"/>
-
-        </circle>
-        
-
-        <circle
-            cx="739"
-            cy="55"
-            r="1.1"
-            fill="#38BDF8"
-            opacity="0.4">
-
-            <animate
-                attributeName="opacity"
-                values="0.1;0.9;0.1"
-                dur="7.9s"
+                dur="3.4s"
                 begin="3.4s"
                 repeatCount="indefinite"/>
 
@@ -1072,7 +972,7 @@
                 attributeName="transform"
                 type="translate"
                 values="0,0; 12,-15; 0,0"
-                dur="7.9s"
+                dur="3.4s"
                 begin="3.4s"
                 repeatCount="indefinite"/>
 
@@ -1080,33 +980,83 @@
         
 
         <circle
-            cx="267"
-            cy="201"
+            cx="599"
+            cy="247"
             r="2.3"
-            fill="#67E8F9"
+            fill="#A78BFA"
             opacity="0.4">
 
             <animate
                 attributeName="opacity"
                 values="0.1;0.9;0.1"
-                dur="7.3s"
-                begin="2.2s"
+                dur="5.4s"
+                begin="1.1s"
                 repeatCount="indefinite"/>
 
             <animateTransform
                 attributeName="transform"
                 type="translate"
                 values="0,0; 12,-15; 0,0"
-                dur="7.3s"
-                begin="2.2s"
+                dur="5.4s"
+                begin="1.1s"
                 repeatCount="indefinite"/>
 
         </circle>
         
 
         <circle
-            cx="345"
-            cy="111"
+            cx="528"
+            cy="231"
+            r="1.6"
+            fill="#A78BFA"
+            opacity="0.4">
+
+            <animate
+                attributeName="opacity"
+                values="0.1;0.9;0.1"
+                dur="3.3s"
+                begin="3.2s"
+                repeatCount="indefinite"/>
+
+            <animateTransform
+                attributeName="transform"
+                type="translate"
+                values="0,0; 12,-15; 0,0"
+                dur="3.3s"
+                begin="3.2s"
+                repeatCount="indefinite"/>
+
+        </circle>
+        
+
+        <circle
+            cx="726"
+            cy="291"
+            r="1.6"
+            fill="#93C5FD"
+            opacity="0.4">
+
+            <animate
+                attributeName="opacity"
+                values="0.1;0.9;0.1"
+                dur="6.8s"
+                begin="1.2s"
+                repeatCount="indefinite"/>
+
+            <animateTransform
+                attributeName="transform"
+                type="translate"
+                values="0,0; 12,-15; 0,0"
+                dur="6.8s"
+                begin="1.2s"
+                repeatCount="indefinite"/>
+
+        </circle>
+        
+
+        <circle
+            cx="972"
+            cy="43"
             r="1.3"
             fill="#67E8F9"
             opacity="0.4">
@@ -1115,7 +1065,7 @@
                 attributeName="opacity"
                 values="0.1;0.9;0.1"
                 dur="7.3s"
-                begin="2.7s"
+                begin="4.6s"
                 repeatCount="indefinite"/>
 
             <animateTransform
@@ -1123,15 +1073,40 @@
                 type="translate"
                 values="0,0; 12,-15; 0,0"
                 dur="7.3s"
-                begin="2.7s"
+                begin="4.6s"
                 repeatCount="indefinite"/>
 
         </circle>
         
 
         <circle
-            cx="318"
-            cy="265"
+            cx="234"
+            cy="126"
+            r="1.1"
+            fill="#93C5FD"
+            opacity="0.4">
+
+            <animate
+                attributeName="opacity"
+                values="0.1;0.9;0.1"
+                dur="6.5s"
+                begin="2.5s"
+                repeatCount="indefinite"/>
+
+            <animateTransform
+                attributeName="transform"
+                type="translate"
+                values="0,0; 12,-15; 0,0"
+                dur="6.5s"
+                begin="2.5s"
+                repeatCount="indefinite"/>
+
+        </circle>
+        
+
+        <circle
+            cx="299"
+            cy="221"
             r="2.2"
             fill="#38BDF8"
             opacity="0.4">
@@ -1139,16 +1114,41 @@
             <animate
                 attributeName="opacity"
                 values="0.1;0.9;0.1"
-                dur="3.5s"
-                begin="1.2s"
+                dur="6.5s"
+                begin="5.0s"
                 repeatCount="indefinite"/>
 
             <animateTransform
                 attributeName="transform"
                 type="translate"
                 values="0,0; 12,-15; 0,0"
-                dur="3.5s"
-                begin="1.2s"
+                dur="6.5s"
+                begin="5.0s"
+                repeatCount="indefinite"/>
+
+        </circle>
+        
+
+        <circle
+            cx="877"
+            cy="138"
+            r="2.0"
+            fill="#93C5FD"
+            opacity="0.4">
+
+            <animate
+                attributeName="opacity"
+                values="0.1;0.9;0.1"
+                dur="7.2s"
+                begin="4.7s"
+                repeatCount="indefinite"/>
+
+            <animateTransform
+                attributeName="transform"
+                type="translate"
+                values="0,0; 12,-15; 0,0"
+                dur="7.2s"
+                begin="4.7s"
                 repeatCount="indefinite"/>
 
         </circle>
@@ -1228,7 +1228,7 @@
                 font-weight="600"
                 fill="#67E8F9">
 
-                Laravel  •  React  •  TypeScript  •  Node.js
+                Laravel  •  React  •  TypeScript  •  Node.js  •  Python  
 
             </text>
 
