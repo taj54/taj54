@@ -4,6 +4,9 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '0 0 * * 1' # Weekly on Monday at 00:00 UTC
+  push:
+    paths:
+      - '.github/scripts/**'
 
 permissions:
   contents: write
@@ -17,13 +20,18 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
-      - name: Generate randomized SVG Dev Trivia card and update README
-        run: python .github/scripts/update_readme.py
+      - name: Sync README sections and generate Dev Trivia card
+        run: node .github/scripts/sync-readme.mjs
 
       - name: Commit and push changes
         run: |
@@ -34,6 +42,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md .github/fact_state.json .github/assets
-          git commit -m "feat(readme): randomize dev-trivia SVG filename to prevent image caching"
+          git commit -m "chore(readme): sync README sections and trivia card"
           git pull --rebase origin "${GITHUB_REF_NAME:-main}"
           git push
