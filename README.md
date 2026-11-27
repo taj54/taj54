@@ -2,7 +2,7 @@
 
 <!-- PROFILE_BANNER_START -->
 <p align="center">
-  <img src=".github/assets/profile-banner-75024866400e.svg" alt="TAJ - Full-Stack Product Engineer" width="100%">
+  <img src=".github/assets/profile-banner-71534390ccf6.svg" alt="TAJ - Full-Stack Product Engineer" width="100%">
 </p>
 <!-- PROFILE_BANNER_END -->
 
@@ -129,8 +129,8 @@ Architecting an open-source ecosystem for synchronized, cue-driven interactive v
 <!-- STATS_CARDS_START -->
 <div align="center">
 
-<img src=".github/assets/github-stats-b5adc5.svg" alt="Taj's GitHub Stats" width="48%" />
-<img src=".github/assets/top-langs-b5adc5.svg" alt="Top Languages" width="48%" />
+<img src=".github/assets/github-stats-9af132.svg" alt="Taj's GitHub Stats" width="48%" />
+<img src=".github/assets/top-langs-9af132.svg" alt="Top Languages" width="48%" />
 
 </div>
 <!-- STATS_CARDS_END -->
@@ -160,7 +160,7 @@ Architecting an open-source ecosystem for synchronized, cue-driven interactive v
       <h3>💡 Random Dev Fact</h3>
       <!-- RANDOM_FACT_START -->
 <p align="center">
-  <img src=".github/assets/dev-trivia-15-fa2acf.svg" alt="META CODING: Sometimes I code just to automate coding itself." width="100%" />
+  <img src=".github/assets/dev-trivia-11-e4d884.svg" alt="GIT CRAFT: Git commit messages are my form of storytelling." width="100%" />
 </p>
 <!-- RANDOM_FACT_END -->
     </td>
