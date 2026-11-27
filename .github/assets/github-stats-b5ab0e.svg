@@ -1,0 +1,18 @@
+<svg width="400" height="210" viewBox="0 0 400 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="1" y="1" width="398" height="208" rx="14" fill="#0D1117" stroke="#334155" stroke-width="1.5"/>
+  <text x="28" y="34" fill="#7AA2F7" font-size="14" font-weight="700"
+        font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">⚡ Engineering Snapshot (@taj54)</text>
+  <line x1="28" y1="46" x2="372" y2="46" stroke="#1E293B" stroke-width="1"/>
+
+  <text x="28" y="74" fill="#94A3B8" font-size="10.5" font-weight="700" letter-spacing="0.6" font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">STARS:</text><text x="184" y="74" text-anchor="end" fill="#FBBF24" font-size="12.5" font-weight="700" font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">19</text><text x="204" y="74" fill="#94A3B8" font-size="10.5" font-weight="700" letter-spacing="0.6" font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">FORKS:</text><text x="360" y="74" text-anchor="end" fill="#34D399" font-size="12.5" font-weight="700" font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">2</text><text x="28" y="108" fill="#94A3B8" font-size="10.5" font-weight="700" letter-spacing="0.6" font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">OWNED REPOS:</text><text x="184" y="108" text-anchor="end" fill="#38BDF8" font-size="12.5" font-weight="700" font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">13</text><text x="204" y="108" fill="#94A3B8" font-size="10.5" font-weight="700" letter-spacing="0.6" font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">FOLLOWERS:</text><text x="360" y="108" text-anchor="end" fill="#C084FC" font-size="12.5" font-weight="700" font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">10</text>
+
+  <line x1="28" y1="116" x2="372" y2="116" stroke="#1E293B" stroke-width="1"/>
+  <text x="28" y="120" fill="#64748B" font-size="9.5" font-weight="700" letter-spacing="0.8"
+        font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace" dominant-baseline="hanging">TOP STARRED REPOS</text>
+  <text x="28" y="138" fill="#E2E8F0" font-size="11.5" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">★ 6  universal-version-bump</text><text x="28" y="157" fill="#E2E8F0" font-size="11.5" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">★ 2  ci_to_lara_crew</text>
+
+  <text x="28" y="176" fill="#94A3B8" font-size="10.5"
+        font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">LATEST PUSH: taj54 (2026-11-27)</text>
+  <text x="372" y="196" text-anchor="end" fill="#64748B" font-size="10"
+        font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">SYNCED NOV 27, 2026</text>
+</svg>
