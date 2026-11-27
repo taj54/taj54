@@ -1,18 +1,12 @@
 <div align="center">
 
 <!-- PROFILE_BANNER_START -->
-
-# 👋 Hi, I'm Taj!
-
-### 🌙 Late-Night Code Whisperer & Full-Stack Product Engineer
-*Architecting scalable multi-tenant systems, developer tools, and elegant apps with **Laravel**, **React**, **TypeScript**, and **Node.js** since 2020.*
-
-[![Profile Views](https://komarev.com/ghpvc/?username=taj54&color=7aa2f7&style=for-the-badge)](https://github.com/taj54)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tajul-islam-j)
-[![GitHub](https://img.shields.io/badge/GitHub-1a1b27?style=for-the-badge&logo=github&logoColor=7aa2f7)](https://github.com/taj54)
-[![Portfolio](https://img.shields.io/badge/Portfolio-24283b?style=for-the-badge&logo=googlechrome&logoColor=bb9af7)](https://taj54.github.io)
-[![VS Code Marketplace](https://img.shields.io/badge/VS%20Code%20Marketplace-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://marketplace.visualstudio.com/publishers/taj154dev)
-
+<div align="center">
+  <img
+    src=".github/assets/profile-banner.svg"
+    width="100%"
+    alt="Taj - Full-Stack Product Engineer"/>
+</div>
 <!-- PROFILE_BANNER_END -->
 
 </div>
@@ -133,8 +127,8 @@ Architecting an open-source ecosystem for synchronized, cue-driven interactive v
 <!-- STATS_CARDS_START -->
 <div align="center">
 
-<img src=".github/assets/github-stats-a1bc32.svg" alt="Taj's GitHub Stats" width="48%" />
-<img src=".github/assets/top-langs-a1bc32.svg" alt="Top Languages" width="48%" />
+<img src=".github/assets/github-stats-8af969.svg" alt="Taj's GitHub Stats" width="48%" />
+<img src=".github/assets/top-langs-8af969.svg" alt="Top Languages" width="48%" />
 
 </div>
 <!-- STATS_CARDS_END -->
@@ -164,7 +158,7 @@ Architecting an open-source ecosystem for synchronized, cue-driven interactive v
       <h3>💡 Random Dev Fact</h3>
       <!-- RANDOM_FACT_START -->
 <p align="center">
-  <img src=".github/assets/dev-trivia-08-b911c7.svg" alt="DEBUGGING: I debug best with strong coffee in hand." width="100%" />
+  <img src=".github/assets/dev-trivia-18-b00ad7.svg" alt="AI AGENTS: I use CrewAI to teach old code new tricks." width="100%" />
 </p>
 <!-- RANDOM_FACT_END -->
     </td>
