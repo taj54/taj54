@@ -155,7 +155,7 @@ Architecting an open-source ecosystem for synchronized, cue-driven interactive v
       <h3>💡 Random Dev Fact</h3>
       <!-- RANDOM_FACT_START -->
 <p align="center">
-  <img src=".github/assets/dev-trivia-11-b79fe0.svg" alt="Dev Trivia Card" width="100%" />
+  <img src=".github/assets/dev-trivia-04-13cad5.svg" alt="Dev Trivia Card" width="100%" />
 </p>
 <!-- RANDOM_FACT_END -->
     </td>
