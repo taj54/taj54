@@ -2,19 +2,24 @@
 from pathlib import Path
 from xml.sax.saxutils import escape
 import re
+import uuid
 
 ROOT = Path.cwd()
 ASSET_DIR = ROOT / ".github" / "assets"
-SVG_PATH = ASSET_DIR / "profile-banner.svg"
 README_PATH = ROOT / "README.md"
 
 ASSET_DIR.mkdir(parents=True, exist_ok=True)
 
+# Generate a unique banner filename
+BANNER_NAME = f"profile-banner-{uuid.uuid4().hex[:12]}.svg"
+SVG_PATH = ASSET_DIR / BANNER_NAME
+
 NAME = "TAJ"
 ROLE = "FULL-STACK PRODUCT ENGINEER"
 TAGLINE = "Building scalable systems, developer tools & elegant digital experiences."
-TECH = ["LARAVEL", "REACT", "TYPESCRIPT", "NODE.JS","PYTHON"]
+TECH = ["LARAVEL", "REACT", "TYPESCRIPT", "NODE.JS", "PYTHON"]
 
+# Generate technology pills
 tech_pills = ""
 x = 64
 
@@ -121,17 +126,14 @@ svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
     </style>
   </defs>
 
-  <!-- Background -->
   <rect width="1200" height="360" fill="url(#bg)"/>
   <rect width="1200" height="360" fill="url(#grid)"/>
 
-  <!-- Ambient glow -->
   <ellipse cx="950" cy="170" rx="300" ry="230"
            fill="url(#glow)" filter="url(#blur)"/>
   <ellipse cx="180" cy="340" rx="250" ry="100"
            fill="#0891b2" opacity=".12" filter="url(#blur)"/>
 
-  <!-- Decorative right-side orbit -->
   <g fill="none" stroke="url(#accent)" opacity=".55">
     <circle cx="990" cy="180" r="105" stroke-width="1.2"
             stroke-dasharray="5 10"/>
@@ -147,7 +149,6 @@ svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
     <circle cx="900" cy="270" r="5" fill="#2dd4bf"/>
   </g>
 
-  <!-- Floating particles -->
   <g fill="#a5f3fc">
     <circle class="particle" cx="790" cy="70" r="2"/>
     <circle class="particle" cx="850" cy="310" r="2"/>
@@ -157,10 +158,8 @@ svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
     <circle class="particle" cx="1030" cy="320" r="1.5"/>
   </g>
 
-  <!-- Main content -->
   <g transform="translate(64 0)">
     <text x="0" y="55" class="code">// HELLO, WORLD. I'M</text>
-
     <text x="0" y="125" class="name">{escape(NAME)}</text>
 
     <rect x="0" y="151" width="74" height="3"
@@ -175,7 +174,6 @@ svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
     {tech_pills}
   </g>
 
-  <!-- Bottom animated accent -->
   <rect x="0" y="354" width="1200" height="6" fill="#17233d"/>
   <rect x="0" y="354" width="360" height="6"
         fill="url(#accent)" filter="url(#softGlow)">
@@ -186,13 +184,14 @@ svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
 </svg>
 """
 
+# Write new SVG
 SVG_PATH.write_text(svg, encoding="utf-8")
 
-# Update README banner section
+# Update README with the new filename
 banner = (
     "<!-- PROFILE_BANNER_START -->\n"
     '<p align="center">\n'
-    '  <img src=".github/assets/profile-banner.svg" '
+    f'  <img src=".github/assets/{BANNER_NAME}" '
     'alt="Tajul Islam — Full-Stack Product Engineer" width="100%">\n'
     '</p>\n'
     "<!-- PROFILE_BANNER_END -->"
@@ -204,11 +203,22 @@ if README_PATH.exists():
     pattern = r"<!-- PROFILE_BANNER_START -->.*?<!-- PROFILE_BANNER_END -->"
 
     if re.search(pattern, readme, flags=re.DOTALL):
-        readme = re.sub(pattern, lambda _: banner, readme, count=1, flags=re.DOTALL)
+        readme = re.sub(
+            pattern,
+            lambda _: banner,
+            readme,
+            count=1,
+            flags=re.DOTALL
+        )
     else:
         readme = banner + "\n\n" + readme
 
     README_PATH.write_text(readme, encoding="utf-8")
+
+# Remove older generated banners, keeping the current one
+for old_banner in ASSET_DIR.glob("profile-banner-*.svg"):
+    if old_banner != SVG_PATH:
+        old_banner.unlink()
 
 print(f"Generated: {SVG_PATH.relative_to(ROOT)}")
 print("README banner updated successfully.")
