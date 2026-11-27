@@ -2,7 +2,7 @@
 
 <!-- PROFILE_BANNER_START -->
 <p align="center">
-  <img src=".github/assets/profile-banner-5c1c4e81ae4d.svg" alt="TAJ - Full-Stack Product Engineer" width="100%">
+  <img src=".github/assets/profile-banner-3fe8688fd312.svg" alt="TAJ - Full-Stack Product Engineer" width="100%">
 </p>
 <!-- PROFILE_BANNER_END -->
 
@@ -16,7 +16,7 @@
 
 <!-- ABOUT-ME:START -->
 <p align="center">
-  <img src=".github/assets/about-me-20261127-175526.svg" alt="TAJ - Full-Stack Product Engineer" width="100%">
+  <img src=".github/assets/about-me-20261127-180235.svg" alt="TAJ - Full-Stack Product Engineer" width="100%">
 </p>
 <!-- ABOUT-ME:END -->
 
@@ -123,8 +123,8 @@ Architecting an open-source ecosystem for synchronized, cue-driven interactive v
 <!-- STATS_CARDS_START -->
 <div align="center">
 
-<img src=".github/assets/github-stats-ec14f6.svg" alt="Taj's GitHub Stats" width="48%" />
-<img src=".github/assets/top-langs-ec14f6.svg" alt="Top Languages" width="48%" />
+<img src=".github/assets/github-stats-ad4abf.svg" alt="Taj's GitHub Stats" width="48%" />
+<img src=".github/assets/top-langs-ad4abf.svg" alt="Top Languages" width="48%" />
 
 </div>
 <!-- STATS_CARDS_END -->
@@ -154,7 +154,7 @@ Architecting an open-source ecosystem for synchronized, cue-driven interactive v
       <h3>💡 Random Dev Fact</h3>
       <!-- RANDOM_FACT_START -->
 <p align="center">
-  <img src=".github/assets/dev-trivia-13-a59e8c.svg" alt="OPEN SOURCE: I forked youtube_metadata_verifier and made it better." width="100%" />
+  <img src=".github/assets/dev-trivia-05-33049b.svg" alt="MEDIA &amp; API: Love mixing FastAPI with video workflows." width="100%" />
 </p>
 <!-- RANDOM_FACT_END -->
     </td>
