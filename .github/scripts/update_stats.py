@@ -17,15 +17,31 @@ TOKEN = os.getenv("GITHUB_TOKEN", "")
 START_MARKER = "<!-- STATS_CARDS_START -->"
 END_MARKER = "<!-- STATS_CARDS_END -->"
 
+# Tokyo Night palette tokens (Night / Storm / Accents)
+BG_START = "#1a1b26"
+BG_END = "#24283b"
+SURFACE_TILE = "#1f2335"
+BORDER_SUBTLE = "#292e42"
+BORDER_FRAME = "#414868"
+TEXT_PRIMARY = "#c0caf5"
+TEXT_SECONDARY = "#9aa5ce"
+TEXT_MUTED = "#565f89"
+TN_BLUE = "#7aa2f7"
+TN_PURPLE = "#bb9af7"
+TN_CYAN = "#7dcfff"
+TN_GREEN = "#9ece6a"
+TN_YELLOW = "#e0af68"
+TN_RED = "#f7768e"
+
 LANG_COLORS = {
-    "TypeScript": "#3178C6",
-    "JavaScript": "#F7DF1E",
-    "Python": "#3776AB",
-    "PHP": "#777BB4",
-    "HTML": "#E34F26",
-    "CSS": "#1572B6",
-    "Vue": "#4FC08D",
-    "Shell": "#89E051",
+    "TypeScript": TN_BLUE,
+    "JavaScript": TN_YELLOW,
+    "Python": TN_CYAN,
+    "PHP": TN_PURPLE,
+    "HTML": TN_RED,
+    "CSS": TN_BLUE,
+    "Vue": TN_GREEN,
+    "Shell": TN_GREEN,
 }
 
 
@@ -99,64 +115,80 @@ def cleanup_old_stats_svgs(assets_dir: Path) -> None:
 
 def build_stats_svg(metrics: dict) -> str:
     updated = datetime.now(timezone.utc).strftime("%b %d, %Y").upper()
-    summary_items = [
-        ("STARS", str(metrics["stars"]), "#FBBF24"),
-        ("FORKS", str(metrics["forks"]), "#34D399"),
-        ("OWNED REPOS", str(metrics["public_repos"]), "#38BDF8"),
-        ("FOLLOWERS", str(metrics["followers"]), "#C084FC"),
+    tiles = [
+        ("STARS", str(metrics["stars"]), TN_YELLOW),
+        ("FORKS", str(metrics["forks"]), TN_GREEN),
+        ("REPOS", str(metrics["public_repos"]), TN_CYAN),
+        ("FOLLOWERS", str(metrics["followers"]), TN_PURPLE),
     ]
 
-    stat_cells = []
-    for idx, (label, val, color) in enumerate(summary_items):
+    tile_svg = []
+    for idx, (label, val, accent) in enumerate(tiles):
         col = idx % 2
         row = idx // 2
-        x = 28 + col * 176
-        y = 74 + row * 34
-        stat_cells.append(
-            f'<text x="{x}" y="{y}" fill="#94A3B8" font-size="10.5" font-weight="700" letter-spacing="0.6" '
-            f'font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">{label}:</text>'
-            f'<text x="{x + 156}" y="{y}" text-anchor="end" fill="{color}" font-size="12.5" font-weight="700" '
+        tx = 24 + col * 180
+        ty = 56 + row * 48
+        tile_svg.append(
+            f'<rect x="{tx}" y="{ty}" width="172" height="40" rx="8" fill="{SURFACE_TILE}" stroke="{BORDER_SUBTLE}" stroke-width="1"/>'
+            f'<rect x="{tx}" y="{ty + 8}" width="3" height="24" rx="1.5" fill="{accent}"/>'
+            f'<text x="{tx + 12}" y="{ty + 17}" fill="{TEXT_MUTED}" font-size="9" font-weight="700" letter-spacing="0.8" '
+            f'font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">{label}</text>'
+            f'<text x="{tx + 12}" y="{ty + 32}" fill="{TEXT_PRIMARY}" font-size="13" font-weight="700" '
             f'font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">{html.escape(val)}</text>'
         )
 
     repo_lines = []
     for i, (repo_name, stars) in enumerate(metrics["top_starred"]):
-        ry = 138 + i * 19
-        display_name = repo_name if len(repo_name) <= 28 else repo_name[:25] + "..."
+        ry = 172 + i * 16
+        display_name = repo_name if len(repo_name) <= 27 else repo_name[:24] + "..."
         repo_lines.append(
-            f'<text x="28" y="{ry}" fill="#E2E8F0" font-size="11.5" font-weight="600" '
-            f'font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">★ {stars}  {html.escape(display_name)}</text>'
+            f'<text x="34" y="{ry}" fill="{TEXT_SECONDARY}" font-size="11" font-weight="600" '
+            f'font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">'
+            f'<tspan fill="{TN_YELLOW}">★ {stars}</tspan>  {html.escape(display_name)}</text>'
         )
 
     latest_display = metrics["latest_push"]
-    if len(latest_display) > 46:
-        latest_display = latest_display[:43] + "..."
+    if len(latest_display) > 42:
+        latest_display = latest_display[:39] + "..."
 
-    return f"""<svg width="400" height="210" viewBox="0 0 400 210" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="1" y="1" width="398" height="208" rx="14" fill="#0D1117" stroke="#334155" stroke-width="1.5"/>
-  <text x="28" y="34" fill="#7AA2F7" font-size="14" font-weight="700"
-        font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">⚡ Engineering Snapshot (@{html.escape(USERNAME)})</text>
-  <line x1="28" y1="46" x2="372" y2="46" stroke="#1E293B" stroke-width="1"/>
+    return f"""<svg width="400" height="228" viewBox="0 0 400 228" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tnCardBg" x1="0" y1="0" x2="400" y2="228" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="{BG_START}"/>
+      <stop offset="100%" stop-color="{BG_END}"/>
+    </linearGradient>
+    <linearGradient id="tnTopBar" x1="24" y1="0" x2="376" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="{TN_BLUE}"/>
+      <stop offset="50%" stop-color="{TN_PURPLE}"/>
+      <stop offset="100%" stop-color="{TN_CYAN}"/>
+    </linearGradient>
+  </defs>
 
-  {''.join(stat_cells)}
+  <rect x="1" y="1" width="398" height="226" rx="14" fill="url(#tnCardBg)" stroke="{BORDER_FRAME}" stroke-width="1.2"/>
+  <rect x="24" y="1" width="120" height="2.5" rx="1.25" fill="url(#tnTopBar)"/>
 
-  <line x1="28" y1="116" x2="372" y2="116" stroke="#1E293B" stroke-width="1"/>
-  <text x="28" y="120" fill="#64748B" font-size="9.5" font-weight="700" letter-spacing="0.8"
-        font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace" dominant-baseline="hanging">TOP STARRED REPOS</text>
+  <text x="24" y="34" fill="{TN_BLUE}" font-size="13.5" font-weight="700"
+        font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">⚡ Engineering Snapshot</text>
+  <text x="376" y="34" text-anchor="end" fill="{TEXT_MUTED}" font-size="10.5" font-weight="600"
+        font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">@{html.escape(USERNAME)}</text>
+
+  {''.join(tile_svg)}
+
+  <rect x="24" y="158" width="352" height="44" rx="8" fill="{SURFACE_TILE}" stroke="{BORDER_SUBTLE}" stroke-width="1"/>
   {''.join(repo_lines)}
 
-  <text x="28" y="176" fill="#94A3B8" font-size="10.5"
-        font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">LATEST PUSH: {html.escape(latest_display)}</text>
-  <text x="372" y="196" text-anchor="end" fill="#64748B" font-size="10"
-        font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">SYNCED {updated}</text>
+  <text x="24" y="216" fill="{TEXT_MUTED}" font-size="9.5"
+        font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">PUSH: {html.escape(latest_display)}</text>
+  <text x="376" y="216" text-anchor="end" fill="{TEXT_MUTED}" font-size="9.5"
+        font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">{updated}</text>
 </svg>
 """
 
 
 def build_langs_svg(top_langs: list[tuple[str, int]], total_size_kb: int) -> str:
     total = sum(size for _, size in top_langs) or 1
-    bar_x = 28
-    bar_w = 344
+    bar_x = 24
+    bar_w = 352
     segments = []
     legend = []
 
@@ -164,34 +196,55 @@ def build_langs_svg(top_langs: list[tuple[str, int]], total_size_kb: int) -> str
     for idx, (lang, size) in enumerate(top_langs):
         pct = (size / total) * 100
         seg_w = max(4, round((size / total) * bar_w))
-        color = LANG_COLORS.get(lang, "#7AA2F7")
+        if idx == len(top_langs) - 1:
+            seg_w = max(4, (bar_x + bar_w) - cursor)
+        color = LANG_COLORS.get(lang, TN_BLUE)
         segments.append(
-            f'<rect x="{cursor}" y="58" width="{seg_w}" height="11" fill="{color}"/>'
+            f'<rect x="{cursor}" y="58" width="{seg_w}" height="10" rx="2" fill="{color}"/>'
         )
         cursor += seg_w
 
         col = idx % 2
         row = idx // 2
-        lx = 28 + col * 175
-        ly = 98 + row * 23
+        lx = 24 + col * 178
+        ly = 94 + row * 24
         legend.append(
-            f'<circle cx="{lx + 4}" cy="{ly - 4}" r="4.5" fill="{color}"/>'
-            f'<text x="{lx + 15}" y="{ly}" fill="#E2E8F0" font-size="11.5" font-weight="600" '
-            f'font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">{html.escape(lang)} {pct:.1f}%</text>'
+            f'<rect x="{lx}" y="82" width="174" height="19" rx="6" fill="{SURFACE_TILE}" stroke="{BORDER_SUBTLE}" stroke-width="1"/>'
+            if False
+            else f'<circle cx="{lx + 8}" cy="{ly - 4}" r="4.5" fill="{color}"/>'
+            f'<text x="{lx + 20}" y="{ly}" fill="{TEXT_PRIMARY}" font-size="11" font-weight="600" '
+            f'font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">{html.escape(lang)} <tspan fill="{TEXT_SECONDARY}">{pct:.1f}%</tspan></text>'
         )
 
-    footprint_label = f"CODEBASE FOOTPRINT: {format_size_kb(total_size_kb)} ACROSS {len(top_langs)} TOP LANGS"
+    footprint_label = f"{format_size_kb(total_size_kb)} FOOTPRINT • {len(top_langs)} ACTIVE LANGS"
 
-    return f"""<svg width="400" height="210" viewBox="0 0 400 210" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="1" y="1" width="398" height="208" rx="14" fill="#0D1117" stroke="#334155" stroke-width="1.5"/>
-  <text x="28" y="34" fill="#BB9AF7" font-size="14" font-weight="700"
+    return f"""<svg width="400" height="228" viewBox="0 0 400 228" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tnLangBg" x1="0" y1="0" x2="400" y2="228" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="{BG_START}"/>
+      <stop offset="100%" stop-color="{BG_END}"/>
+    </linearGradient>
+    <linearGradient id="tnLangBar" x1="24" y1="0" x2="376" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="{TN_PURPLE}"/>
+      <stop offset="100%" stop-color="{TN_CYAN}"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="1" y="1" width="398" height="226" rx="14" fill="url(#tnLangBg)" stroke="{BORDER_FRAME}" stroke-width="1.2"/>
+  <rect x="24" y="1" width="120" height="2.5" rx="1.25" fill="url(#tnLangBar)"/>
+
+  <text x="24" y="34" fill="{TN_PURPLE}" font-size="13.5" font-weight="700"
         font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">🧩 Language &amp; Repo Mix</text>
-  <line x1="28" y1="46" x2="372" y2="46" stroke="#1E293B" stroke-width="1"/>
-  <rect x="{bar_x}" y="58" width="{bar_w}" height="11" rx="5.5" fill="#1E293B"/>
+  <text x="376" y="34" text-anchor="end" fill="{TEXT_MUTED}" font-size="10.5" font-weight="600"
+        font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">OWNED</text>
+
+  <rect x="{bar_x}" y="58" width="{bar_w}" height="10" rx="5" fill="{SURFACE_TILE}" stroke="{BORDER_SUBTLE}" stroke-width="1"/>
   {''.join(segments)}
+
   {''.join(legend)}
-  <line x1="28" y1="166" x2="372" y2="166" stroke="#1E293B" stroke-width="1"/>
-  <text x="28" y="192" fill="#94A3B8" font-size="10" font-weight="600"
+
+  <line x1="24" y1="184" x2="376" y2="184" stroke="{BORDER_SUBTLE}" stroke-width="1"/>
+  <text x="24" y="216" fill="{TEXT_SECONDARY}" font-size="10" font-weight="600"
         font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">{html.escape(footprint_label)}</text>
 </svg>
 """
