@@ -1,4 +1,3 @@
-
 from pathlib import Path
 from xml.sax.saxutils import escape
 import re
@@ -67,6 +66,36 @@ svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
       <stop offset="100%" stop-color="#67e8f9"/>
     </linearGradient>
 
+    <!-- Wide ambient glow -->
+    <linearGradient id="sheenGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset="35%" stop-color="#38bdf8" stop-opacity=".10"/>
+      <stop offset="50%" stop-color="#a78bfa" stop-opacity=".20"/>
+      <stop offset="65%" stop-color="#38bdf8" stop-opacity=".10"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Bright central highlight -->
+    <linearGradient id="sheenCore" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="42%" stop-color="#67e8f9" stop-opacity=".12"/>
+      <stop offset="49%" stop-color="#ffffff" stop-opacity=".48"/>
+      <stop offset="52%" stop-color="#ffffff" stop-opacity=".58"/>
+      <stop offset="60%" stop-color="#c4b5fd" stop-opacity=".18"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <clipPath id="bannerClip">
+      <rect x="0" y="0" width="1200" height="380" rx="18"/>
+    </clipPath>
+
+    <filter id="sheenBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+
+    <clipPath id="bannerClip">
+      <rect x="0" y="0" width="1200" height="380" rx="18"/>
+    </clipPath>
     <radialGradient id="ambient">
       <stop offset="0%" stop-color="#6d28d9" stop-opacity=".32"/>
       <stop offset="100%" stop-color="#6d28d9" stop-opacity="0"/>
@@ -188,6 +217,58 @@ svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
 
   <ellipse cx="180" cy="350" rx="220" ry="110"
            fill="#0891b2" opacity=".12" filter="url(#softBlur)"/>
+
+    <!-- Premium holographic diagonal light sweep -->
+    <g clip-path="url(#bannerClip)" pointer-events="none">
+
+      <!-- Soft ambient glow -->
+      <polygon
+        points="-280,-40 -100,-40 180,420 0,420"
+        fill="url(#sheenGlow)"
+        filter="url(#sheenBlur)"
+        opacity=".9">
+
+        <animateTransform
+          attributeName="transform"
+          type="translate"
+          values="-350,0; 1550,0"
+          keyTimes="0;1"
+          dur="7s"
+          repeatCount="indefinite"/>
+      </polygon>
+
+      <!-- Main luminous beam -->
+      <polygon
+        points="-220,-40 -120,-40 160,420 60,420"
+        fill="url(#sheenCore)"
+        opacity=".9">
+
+        <animateTransform
+          attributeName="transform"
+          type="translate"
+          values="-350,0; 1550,0"
+          keyTimes="0;1"
+          dur="7s"
+          repeatCount="indefinite"/>
+      </polygon>
+
+      <!-- Fine white reflection -->
+      <polygon
+        points="-170,-40 -155,-40 125,420 110,420"
+        fill="#ffffff"
+        opacity=".12"
+        filter="url(#sheenBlur)">
+
+        <animateTransform
+          attributeName="transform"
+          type="translate"
+          values="-350,0; 1550,0"
+          keyTimes="0;1"
+          dur="7s"
+          repeatCount="indefinite"/>
+      </polygon>
+
+    </g>
 
   <!-- Decorative border -->
   <rect x="12" y="12" width="1176" height="356" rx="18"
@@ -316,27 +397,17 @@ banner = (
     '<p align="center">\n'
     f'  <img src=".github/assets/{BANNER_NAME}" '
     'alt="TAJ - Full-Stack Product Engineer" width="100%">\n'
-    '</p>\n'
+    "</p>\n"
     "<!-- PROFILE_BANNER_END -->"
 )
 
 if README_PATH.exists():
     readme = README_PATH.read_text(encoding="utf-8")
 
-    pattern = (
-        r"<!-- PROFILE_BANNER_START -->"
-        r".*?"
-        r"<!-- PROFILE_BANNER_END -->"
-    )
+    pattern = r"<!-- PROFILE_BANNER_START -->" r".*?" r"<!-- PROFILE_BANNER_END -->"
 
     if re.search(pattern, readme, flags=re.DOTALL):
-        readme = re.sub(
-            pattern,
-            lambda _: banner,
-            readme,
-            count=1,
-            flags=re.DOTALL
-        )
+        readme = re.sub(pattern, lambda _: banner, readme, count=1, flags=re.DOTALL)
     else:
         readme = banner + "\n\n" + readme
 
