@@ -178,8 +178,3 @@ Connect with me on **[LinkedIn](https://www.linkedin.com/in/tajul-islam-j)**, ex
 
 </div>
 
-<!-- ABOUT-ME-SVG:START -->
-## About Me
-
-<img src="wdwqdqwd.svg" alt="About Me" width="100%" />
-<!-- ABOUT-ME-SVG:END -->
