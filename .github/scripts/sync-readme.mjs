@@ -104,3 +104,6 @@ execFileSync(pythonCmd, [funfactScriptPath], { cwd: rootDir, stdio: "inherit" })
 
 const statsScriptPath = path.join(rootDir, ".github", "scripts", "update_stats.py");
 execFileSync(pythonCmd, [statsScriptPath], { cwd: rootDir, stdio: "inherit" });
+
+const profileScriptPath = path.join(rootDir, ".github", "scripts", "generate_profile_banner.py");
+execFileSync(pythonCmd, [profileScriptPath], { cwd: rootDir, stdio: "inherit" });
